@@ -1,0 +1,31 @@
+{
+  "name": "children-foundation",
+  "version": "1.0.0",
+  "description": "development of a website for a local foundation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valecarlos/children-Foundation.git"
+  },
+  "keywords": [
+    "foundation",
+    "non-profit",
+    "sass",
+    "angularjs"
+  ],
+  "author": "Carlos Valencia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valecarlos/children-Foundation/issues"
+  },
+  "homepage": "https://github.com/valecarlos/children-Foundation#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

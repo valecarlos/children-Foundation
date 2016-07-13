@@ -1,0 +1,41 @@
+.top
+  height: 6px
+  background: repeating-linear-gradient(90deg, $first-color 0%,$first-color 25%, $second-color 25%, $second-color 50%, $third-color 50%, $third-color 75%, $fourth-color 75%, $fourth-color 100%)
+    size: 50% 100%
+
+.nav-wrapper
+  padding: 0px
+
+.navigation
+  margin: 10px 4em
+  overflow: auto
+
+  .main-icon
+    display: inline-block
+
+    svg
+      width: 70px
+
+  .menu
+    float: right
+    margin-right: 20px
+
+    li
+      display: inline-block
+      margin-right: 1em
+
+      &.active
+        border-bottom: solid 2px $third-color
+
+      a
+        display: block
+        padding: 15px 15px
+
+.donar
+  color: white
+  background-color: $first-color
+
+.header
+  height: 350px
+  background: url('../img/kidsWater.jpg')
+    size: cover
