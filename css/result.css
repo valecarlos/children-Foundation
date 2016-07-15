@@ -13,6 +13,15 @@ a {
   text-decoration: none;
 }
 
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 .top {
   height: 6px;
   background: repeating-linear-gradient(90deg, #F44336 0%, #F44336 25%, #009688 25%, #009688 50%, #9C27B0 50%, #9C27B0 75%, #FFC107 75%, #FFC107 100%);
@@ -55,9 +64,21 @@ a {
 }
 
 .header {
-  height: 350px;
+  height: 400px;
+  position: relative;
   background: url("../img/kidsWater.jpg");
   background-size: cover;
+}
+.header .header-title {
+  position: absolute;
+  padding: 20px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 footer {
@@ -79,6 +100,27 @@ footer p {
   margin: 10px;
 }
 
+.icons {
+  text-align: center;
+  padding: 3em 3em;
+}
+
+.icon-card {
+  display: inline-block;
+  padding: 15px;
+  margin: 10px 20px;
+  max-width: 200px;
+}
+.icon-card img {
+  width: 140px;
+}
+
+.icon-caption {
+  color: gray;
+  margin-top: 15px;
+  text-align: center;
+}
+
 .blog-links {
   text-align: center;
 }
@@ -87,33 +129,156 @@ footer p {
   border: none;
   height: 2px;
   background-color: #009688;
-  width: 50%;
+  width: 25%;
 }
 .blog-links h1 {
   display: block;
   color: gray;
+  margin: 6px 0px 15px;
 }
-.blog-links > a {
-  margin: 10px;
+.blog-links .view-more {
+  padding: 15px 0px;
+}
+.blog-links .view-more a {
+  margin: 10px 0px 15px;
   display: inline-block;
   padding: 10px;
   color: #009688;
   border: solid 2px #009688;
 }
 
-.icon-card {
+.news-wrapper {
+  position: relative;
   display: inline-block;
-  padding: 15px;
-  margin: 10px 15px;
+  width: 380px;
+  height: 240px;
+  margin: 10px;
 }
-.icon-card svg {
-  width: 200px;
+.news-wrapper .news-date {
+  position: absolute;
+  top: 6px;
+  transform: translateX(-15px);
+  border: 3px solid #009688;
+  border-radius: 8px;
+  width: 60px;
+  background-color: #efefef;
+  padding: 5px;
+  z-index: 3;
+}
+.news-wrapper .news-date .news-day {
+  background-color: white;
+  border-radius: 8px;
+  color: #009688;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.news-wrapper .news-date .news-month {
+  border-radius: 4px;
+  background-color: white;
+  color: #009688;
+  font-weight: 700;
+}
+.news-wrapper .news-card {
+  overflow: hidden;
+  width: 380px;
+  height: 240px;
+  background: url("../img/bicycle.jpg");
+  background-size: cover;
+}
+.news-wrapper .news-card:hover .news-caption {
+  transform: translateY(0%);
+}
+.news-wrapper .news-card .news-caption {
+  width: 380px;
+  height: 240px;
+  background-color: rgba(0, 0, 0, 0.45);
+  transform: translateY(75%);
+  transition: all 0.8s ease-in-out;
+}
+.news-wrapper .news-card .news-caption strong {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.news-wrapper .news-body {
+  color: gray;
+  line-height: 1.5;
+  margin: 12px;
 }
 
-.icon-caption {
-  color: gray;
-  margin-top: 15px;
+.about {
   text-align: center;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+.about hr {
+  display: inline-block;
+  border: none;
+  height: 2px;
+  background-color: #9C27B0;
+  width: 25%;
+}
+.about h1 {
+  display: block;
+  color: gray;
+  margin: 6px 0px 15px;
+}
+.about .view-more {
+  padding: 15px 0px;
+}
+.about .view-more #about-button {
+  margin: 10px 0px 15px;
+  display: inline-block;
+  padding: 10px;
+  color: #9C27B0;
+  border: solid 2px #9C27B0;
+  cursor: pointer;
+}
+.about .view-more #about-button span {
+  transform: translateY(1.5px);
+  display: inline-block;
+}
+
+.about-wrapper {
+  width: 200%;
+  position: relative;
+  transition: all 0.4s ease-in;
+}
+.about-wrapper.is-showing {
+  transform: translate3d(-50%, 0, 0);
+}
+.about-wrapper .about-main {
+  width: 50%;
+  float: left;
+}
+.about-wrapper .about-main .about-p {
+  color: gray;
+  line-height: 1.5;
+  max-width: 350px;
+  margin: auto;
+}
+.about-wrapper .about-extended {
+  width: 50%;
+  float: left;
+  height: 1000px;
+  display: none;
+}
+
+.extended-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+}
+.extended-container #back-about-button {
+  display: inline-block;
+  padding: 12px;
+  color: #9C27B0;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=result.css.map */

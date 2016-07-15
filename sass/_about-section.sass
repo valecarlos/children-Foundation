@@ -1,0 +1,67 @@
+.about
+  text-align: center
+  background-color: $bg-gray
+  overflow: hidden
+
+  hr
+    display: inline-block
+    border: none
+    height: 2px
+    background-color: $third-color
+    width: 25%
+
+  h1
+    display: block
+    color: gray
+    margin: 6px 0px 15px
+
+  .view-more
+    padding: 15px 0px
+
+    #about-button
+      margin: 10px 0px 15px
+      display: inline-block
+      padding: 10px
+      color: $third-color
+      border: solid 2px $third-color
+      cursor: pointer
+
+      span  
+        transform: translateY(1.5px)
+        display: inline-block
+
+.about-wrapper
+  width: 200%
+  position: relative
+  transition: all 0.4s ease-in
+
+  &.is-showing
+    transform: translate3d(-50%,0,0)
+
+  .about-main
+    width: 50%
+    float: left
+
+    .about-p
+      color: gray
+      line-height: 1.5
+      max-width: 350px
+      margin: auto
+
+  .about-extended
+    width: 50%
+    float: left
+    height: 1000px
+    display: none
+
+.extended-container
+  max-width: 900px
+  margin: auto
+  padding: 15px
+
+  #back-about-button
+    display: inline-block
+    padding: 12px
+    color: $third-color
+    font-size: 28px
+    cursor: pointer

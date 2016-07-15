@@ -1,0 +1,86 @@
+.blog-links
+  text-align: center
+
+  hr
+    display: inline-block
+    border: none
+    height: 2px
+    background-color: $second-color
+    width: 25%
+
+  h1
+    display: block
+    color: gray
+    margin: 6px 0px 15px
+  
+  .view-more
+    padding: 15px 0px
+
+  .view-more a
+    margin: 10px 0px 15px
+    display: inline-block
+    padding: 10px
+    color: #009688
+    border: solid 2px $second-color
+
+.news-wrapper
+  position: relative
+  display: inline-block
+  width: 380px
+  height: 240px
+  margin: 10px
+
+  .news-date
+    position: absolute
+    top: 6px
+    transform: translateX(-15px)
+    border: 3px solid $second-color
+    border-radius: 8px
+    width: 60px
+    background-color: #efefef
+    padding: 5px
+    z-index: 3
+
+    .news-day
+      background-color: white
+      border-radius: 8px
+      color: $second-color
+      font-weight: bold
+      font-size: 28px
+      margin-bottom: 5px
+
+    .news-month
+      border-radius: 4px
+      background-color: white
+      color: $second-color
+      font-weight: 700
+
+  .news-card
+    overflow: hidden
+    width: 380px
+    height: 240px
+    background: url('../img/bicycle.jpg')
+      size: cover
+
+    &:hover .news-caption
+      transform: translateY(0%)
+
+    .news-caption
+      width: 380px
+      height: 240px
+      background-color: rgba(0,0,0,0.45)
+      transform: translateY(75%)
+      transition: all 0.8s ease-in-out
+
+      strong
+        display: block
+        text-align: center
+        padding: 10px
+        color: white
+        text-transform: uppercase
+        font-weight: 300
+
+  .news-body
+    color: gray
+    line-height: 1.5
+    margin: 12px
