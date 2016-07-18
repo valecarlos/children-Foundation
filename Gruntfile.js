@@ -7,7 +7,8 @@ module.exports = function(grunt){
 	        style: 'expanded'
 	      },
 	      files: {                         // Dictionary of files
-	        'css/result.css': 'sass/theme.sass'
+	        'css/result.css': 'sass/theme.sass',
+	        'css/newsTheme.css': 'sass/newsTheme.sass'
 	      }
 	    }
 	  },
