@@ -22,11 +22,15 @@ var Slider = function(){
 	var myInterval;
 
 	$("#slider-left").click(function(event){
+		clearInterval(myInterval);
 		goLeft();
+		myInterval = setInterval(goRight, 3000);
 	});
 
 	$("#slider-right").click(function(event){
+		clearInterval(myInterval);
 		goRight();
+		myInterval = setInterval(goRight, 3000);
 	});
 
 	function goRight(){
