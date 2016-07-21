@@ -1,4 +1,5 @@
 .news-header
+  margin-top: 80px
   text-align: center
 
   hr
@@ -14,6 +15,7 @@
     margin: 6px 0px 15px
 
 .news-section
+  margin-top: 80px
   max-width: 1200px
   margin: auto
   padding: 15px
@@ -23,35 +25,46 @@
   text-align: left
 
   .search-box
+    position: relative
     color: $text-main
     margin-bottom: 10px
 
     input
       height: 40px
       width: 100%
-      text-indent: 34px
+      text-indent: 40px
+
+    svg
+      position: absolute
+      top: 10px
+      height: 20px
+      width: 40px
 
 .news-main
   color: $text-main
   margin-bottom: 18px
 
   &.ng-enter
-    transition: 0.5s linear all
+    transition: 0.4s linear all
     opacity: 0
+    transform: translate3d(25px,0px,0px)
 
     &.ng-enter-active
       opacity: 1
+      transform: translate3d(0px,0px,0px)
 
   &.ng-leave 
-    transition: 0.5s linear all
+    transition: 0.4s linear all
+    transform: translate3d(0px,0px,0px)
     opacity: 1
 
     &.ng-leave-active
+      transform: translate3d(25px,0px,0px)
       opacity: 0
   
   .news-main-img
     width: 100%
-    height: 200px
+    height: 300px
 
   h1
     text-transform: uppercase
