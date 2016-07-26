@@ -21,7 +21,8 @@
   padding: 15px
 
 .news-container
-  margin-right: 320px
+  width: 75%
+  float: left
   text-align: left
 
   .search-box
@@ -88,15 +89,35 @@
       margin-left: 11px
       font-size: 11px
 
-
 .sidebar
-  padding: 12px
-  text-align: center
+  width: 25%
+  float: left
+  position: relative
+  padding-left: 15px
+  padding-right: 15px
+
+#to-fix
   color: $text-main
-  width: 280px
-  float: right
-  border: solid 3px $second-color
+  width: 262.5px
+  padding-left: 10px
+  border-left: solid $second-color
+  border-bottom: solid $second-color
 
   div
     margin: 8px 0px
     font-size: 13px
+
+.fix-me
+  position: fixed
+  top: 84px
+
+@media (max-width: 1100px)
+  #to-fix
+    width: 220px
+
+@media (max-width: 992px)
+  #to-fix
+    display: none
+  .news-container
+    width: 100%
+

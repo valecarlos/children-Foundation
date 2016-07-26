@@ -1,5 +1,18 @@
 var myApp = angular.module("newsModule", ['ngAnimate']);
-
+myApp.directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+        	var myEl = angular.element(document.querySelector('#to-fix'));
+             if (this.pageYOffset >= 172) {
+				myEl.addClass('fix-me');
+             } else {
+             	myEl.removeClass('fix-me');
+                 //scope.boolChangeFixClass = false;
+             }
+            //scope.$apply();
+        });
+    };
+});
 myApp.controller("newsController", function($scope){
 	$scope.newsArticles = [
 	  {
