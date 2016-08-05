@@ -1,23 +1,21 @@
 .news-header
-  margin-top: 80px
-  text-align: center
-
-  hr
-    display: inline-block
-    border: none
-    height: 2px
-    background-color: $second-color
-    width: 25%
+  height: 200px
+  position: relative
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("/img/news/event.jpg")
+  background-size: cover
 
   h1
+    color: white
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
     display: block
-    color: $text-main
     margin: 6px 0px 15px
 
 .news-section
-  margin-top: 80px
   max-width: 1200px
-  margin: auto
+  margin: 20px auto
   padding: 15px
 
 .news-container
@@ -42,7 +40,6 @@
       width: 40px
 
 .news-main
-  color: $text-main
   margin-bottom: 18px
 
   &.ng-enter
@@ -76,10 +73,12 @@
     padding-left: 10px
     
     p
+      color: $text-main
       line-height: 1.7
       margin: 5px
 
   .tags
+    color: $text-main
     padding: 12px
 
     label
@@ -116,6 +115,7 @@
     a
       text-transform: capitalize
       display: block
+      color: $text-main
 
 .fix-me
   position: fixed

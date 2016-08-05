@@ -1,0 +1,118 @@
+.products-header
+  height: 200px
+  position: relative
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("/img/news/event.jpg")
+  background-size: cover
+
+  h1
+    color: white
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: block
+    margin: 6px 0px 15px
+
+.stem-intro, .stem-detail
+  max-width: 1100px
+  margin: auto
+  color: $text-main
+  font-family: $font-stack
+
+  h1
+    font-size: 22px
+
+  p
+    margin-top: 6px
+    line-height: 150%
+
+.stem-intro
+  margin-top: 25px
+
+.stem-detail
+  margin-top: 15px
+  margin-bottom: 15px
+
+.program-wrapper
+  padding: 20px 0px
+
+  &:nth-child(even)
+    background-color: $bg-gray
+
+  .program-box
+    max-width: 1100px
+    margin: auto
+  
+    h1
+      font-family: $font-products
+
+    .program-gallery
+      width: 50%
+      padding: 10px
+      float: left
+      text-align: center
+
+      img
+        height: 220px
+        width: 230px
+        //float: left
+        margin: 4px
+
+    .program-desc
+      text-align: center
+      width: 50%
+      float: left
+      padding: 20px
+
+      h1
+        font-family: $font-products
+        padding: 6px 12px
+        display: inline-block
+        border-top: 2px solid gray
+        border-bottom: 2px solid gray
+        color: $title-color
+
+      p
+        color: $text-main
+        text-align: left
+        margin: 8px 0px
+        line-height: 150%
+
+      ul
+        padding-left: 30px
+        text-align: left
+
+        li
+          list-style-type: disc
+          margin-top: 6px
+          color: $first-color
+
+          span
+            color: $text-main
+
+      a
+        margin: 15px 0px 10px
+        display: inline-block
+        padding: 8px 14px
+        color: white
+        background-color: $second-color
+        border: solid 2px $second-color
+        transition: all 0.3s ease-in-out
+
+        &:hover
+          color: $second-color
+          background-color: transparent
+
+
+.info-banner
+  background-color: $third-color
+  padding: 10px
+  font-weight: 500
+
+  p
+    text-align: center
+    font-size: 20px
+    color: white
+    padding: 15px
+    max-width: 1000px
+    margin: auto

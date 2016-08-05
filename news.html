@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noticias</title>
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/newsTheme.css">
 </head>
@@ -35,16 +36,15 @@
 			    <ul class="menu">
 			      <li><a href="index.html">Inicio</a></li>
 			      <li class="active"><a href="news.html">Noticias</a></li>
-			      <li><a href="">Productos</a></li>
-			      <li><a href="">Quienes Somos</a></li>
+			      <li><a href="programs.html">Programas</a></li>
+			      <li><a href="about.html">Quienes Somos</a></li>
 			      <li><a href="">Contactanos</a></li>
 			      <li><a class="donar" href="">DONA AHORA</a></li>
 			    </ul>
 			</div>
-		</div>
+		</div>	
 	<header class="news-header">
-		<hr>
-		<h1>NOTICIAS</h1>
+		<h1 class="title">NOTICIAS</h1>
 	</header>
 	<section class="news-section" ng-controller="newsController">
 		<div class="clearfix">
@@ -64,7 +64,7 @@
 				</div>
 				<div>
 					<div ng-attr-id="{{'article-' + article.index}}" class="news-main" ng-repeat="article in newsArticles | filter:searchText">
-						<h1>{{article.title}}</h1>
+						<h1 class="subtitle">{{article.title}}</h1>
 						<img class="news-main-img" ng-src="{{article.imgPath}}" ng-show="article.imgPath.length" >
 						<div class="news-body">
 							<p>

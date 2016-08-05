@@ -43,6 +43,18 @@ var Slider = function(){
 		$(".slider-wrapper").css({"margin-left" : -slideWidth * currentSlide});
 	}
 
+	function sliderResize(){
+		clearInterval(myInterval);
+		currentSlide = 0;
+		slideWidth = $(".slider-card").width();
+		$(".slider-wrapper").css({"margin-left" : -slideWidth * currentSlide});
+		myInterval = setInterval(goRight, 3000);
+	}
+
 	myInterval = setInterval(goRight, 3000);
+
+	$(window).on('resize', function() {
+	    sliderResize();
+	});
 
 };

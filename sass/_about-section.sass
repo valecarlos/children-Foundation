@@ -2,6 +2,7 @@
   padding: 20px 0px 
   text-align: center
   overflow: hidden
+  background-color: $bg-gray
 
   hr
     display: inline-block
@@ -12,7 +13,6 @@
 
   h1
     display: block
-    color: gray
     margin: 6px 0px 15px
 
   .view-more
@@ -25,10 +25,11 @@
       color: $third-color
       border: solid 2px $third-color
       cursor: pointer
+      transition: all 0.3s ease-in-out 
 
-      span  
-        transform: translateY(1.5px)
-        display: inline-block
+      &:hover
+        color: white
+        background-color: $third-color
 
 .about-wrapper
   width: 200%
@@ -43,9 +44,9 @@
     float: left
 
     .about-p
-      color: gray
+      color: $text-main
       line-height: 1.5
-      max-width: 350px
+      max-width: 450px
       margin: auto
 
   .about-extended

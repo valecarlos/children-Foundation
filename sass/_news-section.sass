@@ -1,5 +1,6 @@
 .blog-links
   text-align: center
+  background-color: $bg-gray
 
   hr
     display: inline-block
@@ -10,7 +11,6 @@
 
   h1
     display: block
-    color: gray
     margin: 6px 0px 15px
   
   .view-more
@@ -20,25 +20,30 @@
     margin: 10px 0px 15px
     display: inline-block
     padding: 10px
-    color: #009688
+    color: $second-color
     border: solid 2px $second-color
+    transition: all 0.3s ease-in-out 
+
+    &:hover
+      color: white
+      background-color: $second-color
 
 .news-wrapper
   position: relative
   display: inline-block
-  width: 380px
-  height: 240px
+  width: 340px
   margin: 10px
+  vertical-align: top
 
   .news-date
     position: absolute
-    top: 6px
+    top: 5px
     transform: translateX(-15px)
     border: 3px solid $second-color
     border-radius: 8px
-    width: 60px
+    width: 54px
     background-color: #efefef
-    padding: 5px
+    padding: 4px
     z-index: 3
 
     .news-day
@@ -46,8 +51,8 @@
       border-radius: 8px
       color: $second-color
       font-weight: bold
-      font-size: 28px
-      margin-bottom: 5px
+      font-size: 26px
+      margin-bottom: 4px
 
     .news-month
       border-radius: 4px
@@ -57,8 +62,8 @@
 
   .news-card
     overflow: hidden
-    width: 380px
-    height: 240px
+    width: 340px
+    height: 210px
     background: url('../img/bicycle.jpg')
       size: cover
 
@@ -66,8 +71,8 @@
       transform: translateY(0%)
 
     .news-caption
-      width: 380px
-      height: 240px
+      width: 340px
+      height: 210px
       background-color: rgba(0,0,0,0.45)
       transform: translateY(75%)
       transition: all 0.8s ease-in-out
@@ -81,6 +86,33 @@
         font-weight: 300
 
   .news-body
-    color: gray
+    color: $text-main
     line-height: 1.5
-    margin: 12px
+    margin: 12px 0px
+
+@media only screen and (min-width: 320px) and (max-width: 565px)
+  .news-wrapper
+    width: 290px
+
+    .news-date
+      top: 4px
+      transform: translateX(-10px)
+      border: 2px solid $second-color
+      width: 47px
+      padding: 3px
+      z-index: 3
+
+      .news-day
+        font-size: 23px
+        margin-bottom: 3px
+
+      .news-month
+        font-weight: 700
+
+    .news-card
+      width: 290px
+      height: 190px
+
+      .news-caption
+        width: 290px
+        height: 190px
