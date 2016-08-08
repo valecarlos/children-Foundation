@@ -1,7 +1,7 @@
 .products-header
   height: 200px
   position: relative
-  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("/img/news/event.jpg")
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../img/news/event.jpg")
   background-size: cover
 
   h1
@@ -116,3 +116,49 @@
     padding: 15px
     max-width: 1000px
     margin: auto
+
+.initiatives-section
+  max-width: 1100px
+  margin: auto
+  padding: 15px 0px
+  text-align: center
+
+  &>h1
+    text-align: left
+    margin: 10px 0px
+
+  .initiative-card
+    margin: 0px 10px
+    vertical-align: top
+    display: inline-block
+    width: 300px
+    padding: 20px 14px
+    border: solid 2px #bbbbbb
+    color: $text-main
+    transition: all 0.3s ease-in-out
+
+    &:hover
+      border-color: $second-color
+
+    h3
+      padding: 5px 0px
+
+    img
+      width: 100%
+      height: 190px
+    p
+      padding: 5px 0px
+      line-height: 150%
+
+    a
+      display: inline-block
+      padding: 6px 10px
+      border: solid 2px $second-color
+      background-color: transparent
+      color: $second-color
+      transition: all 0.3s ease-in-out
+
+      &:hover
+        background-color: $second-color
+        color: white
+

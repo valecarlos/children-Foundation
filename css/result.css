@@ -85,6 +85,7 @@ a {
 .navigation .menu li a {
   display: block;
   padding: 15px 15px;
+  color: #551a8b;
 }
 .navigation .menu li:before {
   content: "";
@@ -104,9 +105,10 @@ a {
 }
 
 .donar {
-  color: white;
+  color: white !important;
   background-color: #F44336;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
 }
 
 .header {
@@ -459,6 +461,8 @@ footer p {
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
   border: 2px solid #F44336;
+  background-color: #F44336;
+  color: white;
 }
 .contributors-section .boton-donar:hover {
   background-color: transparent;

@@ -85,6 +85,7 @@ a {
 .navigation .menu li a {
   display: block;
   padding: 15px 15px;
+  color: #551a8b;
 }
 .navigation .menu li:before {
   content: "";
@@ -104,9 +105,10 @@ a {
 }
 
 .donar {
-  color: white;
+  color: white !important;
   background-color: #F44336;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
 }
 
 .header {
@@ -222,7 +224,7 @@ footer p {
 .news-header {
   height: 200px;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/news/event.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/news/event.jpg");
   background-size: cover;
 }
 .news-header h1 {
