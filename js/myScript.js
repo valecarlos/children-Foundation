@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+	/*
 	console.log("im here");
     $("#about-button").click(function(event){
     	console.log("i was clikced");
@@ -10,7 +11,7 @@ $( document ).ready(function() {
     	$('.about-wrapper').removeClass('is-showing');
     	$('.about-extended').hide(800);
     });
-
+	*/
 	mySlider = new Slider;
 	//setInterval(mySlider.goRight, 1000);
 });

@@ -384,7 +384,7 @@ footer p {
 .about .view-more {
   padding: 15px 0px;
 }
-.about .view-more #about-button {
+.about .view-more > a {
   margin: 10px 0px 15px;
   display: inline-block;
   padding: 10px;
@@ -393,7 +393,7 @@ footer p {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.about .view-more #about-button:hover {
+.about .view-more > a:hover {
   color: white;
   background-color: #9C27B0;
 }

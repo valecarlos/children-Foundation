@@ -76,8 +76,11 @@
   max-width: 1100px
   margin: auto
 
-  &>h1
+  &>h1, h2
     text-align: left
+
+  &>h2
+    color: $subtitle-color
 
   .member-card
     display: inline-block
@@ -92,7 +95,11 @@
       width: 150px
       height: 150px
       border-radius: 50%
-      margin: 5px 0px
+      margin: 5px auto
+      display: block
+
+    &.committee img
+      border: solid 3px $third-color
 
     h3
       color: $title-color
@@ -100,6 +107,10 @@
       display: inline-block
       padding: 6px 8px
       border-bottom: 2px solid $second-color
+
+    &.committee h3
+      border-color: $third-color
+      
     h4
       color: $subtitle-color
       font-style: italic

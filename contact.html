@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto</title>
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/contactTheme.css">
@@ -33,10 +34,10 @@
 				</button>
 			    <ul class="menu">
 			      <li><a href="index.html">Inicio</a></li>
-			      <li class="active"><a href="news.html">Noticias</a></li>
+			      <li><a href="news.html">Noticias</a></li>
 			      <li><a href="programs.html">Programas</a></li>
 			      <li><a href="about.html">Quienes Somos</a></li>
-			      <li><a href="">Contactanos</a></li>
+			      <li class="active"><a href="contact.html">Contactanos</a></li>
 			      <li><a class="donar" href="">DONA AHORA</a></li>
 			    </ul>
 			</div>
@@ -44,6 +45,41 @@
 	<header class="news-header">
 		<h1 class="title">Contáctanos</h1>
 	</header>
+	<section class="contact-section">
+		<div class="mail-container">
+			<h3>Puedes contactarnos en este correo:</h3>
+			<p class="mail-display">info@crearconciencia.org</p>
+		</div>
+		<div class="form-container">
+			<h3>O si lo prefieres puedes diligenciar este formulario, y nos comunicaremos contigo lo más pronto posible!</h3>
+			<form id="ajax-contact" method="post" action="php/index.php">
+				<div class="form-group">
+				    <label for="InputName">Nombre</label>
+				    <input type="text" class="form-control" id="InputName" name="name" placeholder="Nombre">
+				</div>
+				<div class="form-group">
+				    <label for="InputEmail">Correo Electronico</label>
+				    <input type="email" class="form-control" id="InputEmail" name="email" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<label for="comment">Tu Mensaje:</label>
+					<textarea class="form-control" rows="5" id="comment" name="message" placeholder="Envianos tus preguntas o comentarios"></textarea>
+				</div>
+				<button type="submit" name="submit" value="Submit" class="btn btn-default">Enviar</button>
+			</form>
+			<div id="form-messages"></div>
+		</div>
+	</section>
+	<footer>
+		<ul class="footer-menu">
+	      <li><a href="index.html">Inicio</a></li>
+	      <li><a href="news.html">Noticias</a></li>
+	      <li><a href="programs.html">Programas</a></li>
+	      <li><a href="about.html">Quienes Somos</a></li>
+	      <li><a href="contact.html">Contactanos</a></li>
+	    </ul>
+		<p>©2016. Todos los derechos reservados.</p>
+	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
 </html>
