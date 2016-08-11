@@ -22,6 +22,36 @@ a {
   clear: both;
 }
 
+.under-construction {
+  display: block;
+  text-align: center;
+  height: 0px;
+  padding-top: 15px;
+  animation-name: construction-animation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+@keyframes construction-animation {
+  0% {
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    height: 60px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .top-wrapper {
   position: fixed;
   z-index: 5;
@@ -36,8 +66,11 @@ a {
 }
 
 .top {
+  animation-name: margin-top-animation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
   height: 3px;
-  background: repeating-linear-gradient(90deg, #F44336 0%, #F44336 25%, #009688 25%, #009688 50%, #9C27B0 50%, #9C27B0 75%, #FFC107 75%, #FFC107 100%);
+  background: repeating-linear-gradient(90deg, #2e8ab3 0%, #2e8ab3 25%, #33658A 25%, #33658A 50%, #2e8ab3 50%, #2e8ab3 75%, #33658A 75%, #33658A 100%);
   background-size: 50% 100%;
 }
 
@@ -47,7 +80,6 @@ a {
 
 .navigation {
   margin: 10px 4em;
-  overflow: auto;
 }
 .navigation .burger-nav {
   margin-right: 10px;
@@ -82,6 +114,19 @@ a {
   margin-right: 1em;
   position: relative;
 }
+.navigation .menu li.dropdown .dropdown-content {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transform-origin: top left;
+}
+.navigation .menu li.dropdown:hover .dropdown-content {
+  display: block;
+  animation-name: hover-animation;
+  animation-duration: 0.3s;
+}
 .navigation .menu li a {
   display: block;
   padding: 15px 15px;
@@ -94,7 +139,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #9C27B0;
+  background-color: #2e8ab3;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -106,7 +151,7 @@ a {
 
 .donar {
   color: white !important;
-  background-color: #F44336;
+  background-color: #2e8ab3;
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
 }
@@ -143,9 +188,9 @@ a {
   margin: 15px 0px 20px;
 }
 .header .header-title a {
-  background-color: #009a8b;
+  background-color: #34678d;
   color: white;
-  border: 2px solid #009a8b;
+  border: 2px solid #34678d;
   padding: 14px 24px;
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -202,6 +247,24 @@ h1.subtitle {
     padding: 12px;
   }
 }
+@keyframes hover-animation {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes margin-top-animation {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 60px;
+  }
+}
 footer {
   border-top: solid 2px lightgray;
   text-align: center;
@@ -215,6 +278,7 @@ footer p {
 
 .footer-menu li {
   display: inline-block;
+  margin-top: 10px;
 }
 .footer-menu li a {
   color: #7b7b7b;
@@ -239,6 +303,7 @@ footer p {
 
 .stem-intro, .stem-detail {
   max-width: 1100px;
+  padding: 0px 20px;
   margin: auto;
   color: #696969;
   font-family: "Work Sans", sans-serif;
@@ -269,6 +334,12 @@ footer p {
 .program-wrapper .program-box {
   max-width: 1100px;
   margin: auto;
+  display: -ms-flexbox;
+  display: flex;
+}
+.program-wrapper .program-box.reversed {
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
 }
 .program-wrapper .program-box h1 {
   font-family: "Oleo Script", cursive;
@@ -276,7 +347,6 @@ footer p {
 .program-wrapper .program-box .program-gallery {
   width: 50%;
   padding: 10px;
-  float: left;
   text-align: center;
 }
 .program-wrapper .program-box .program-gallery img {
@@ -287,7 +357,6 @@ footer p {
 .program-wrapper .program-box .program-desc {
   text-align: center;
   width: 50%;
-  float: left;
   padding: 20px;
 }
 .program-wrapper .program-box .program-desc h1 {
@@ -311,7 +380,7 @@ footer p {
 .program-wrapper .program-box .program-desc ul li {
   list-style-type: disc;
   margin-top: 6px;
-  color: #F44336;
+  color: #2e8ab3;
 }
 .program-wrapper .program-box .program-desc ul li span {
   color: #696969;
@@ -321,17 +390,17 @@ footer p {
   display: inline-block;
   padding: 8px 14px;
   color: white;
-  background-color: #009688;
-  border: solid 2px #009688;
+  background-color: #33658A;
+  border: solid 2px #33658A;
   transition: all 0.3s ease-in-out;
 }
 .program-wrapper .program-box .program-desc a:hover {
-  color: #009688;
+  color: #33658A;
   background-color: transparent;
 }
 
 .info-banner {
-  background-color: #9C27B0;
+  background-color: #2e8ab3;
   padding: 10px;
   font-weight: 500;
 }
@@ -347,7 +416,7 @@ footer p {
 .initiatives-section {
   max-width: 1100px;
   margin: auto;
-  padding: 15px 0px;
+  padding: 15px 20px;
   text-align: center;
 }
 .initiatives-section > h1 {
@@ -355,23 +424,27 @@ footer p {
   margin: 10px 0px;
 }
 .initiatives-section .initiative-card {
-  margin: 0px 10px;
+  margin: 10px;
   vertical-align: top;
   display: inline-block;
   width: 300px;
   padding: 20px 14px;
-  border: solid 2px #bbbbbb;
   color: #696969;
   transition: all 0.3s ease-in-out;
 }
+.initiatives-section .initiative-card.wide {
+  width: calc(100% - 40px);
+  max-width: 600px;
+}
 .initiatives-section .initiative-card:hover {
-  border-color: #009688;
+  border-color: #33658A;
 }
 .initiatives-section .initiative-card h3 {
   padding: 5px 0px;
 }
 .initiatives-section .initiative-card img {
   width: 100%;
+  max-width: 272px;
   height: 190px;
 }
 .initiatives-section .initiative-card p {
@@ -381,14 +454,40 @@ footer p {
 .initiatives-section .initiative-card a {
   display: inline-block;
   padding: 6px 10px;
-  border: solid 2px #009688;
+  border: solid 2px #33658A;
   background-color: transparent;
-  color: #009688;
+  color: #33658A;
   transition: all 0.3s ease-in-out;
 }
 .initiatives-section .initiative-card a:hover {
-  background-color: #009688;
+  background-color: #33658A;
   color: white;
+}
+
+@media only screen and (max-width: 1021px) {
+  .program-wrapper .program-box .program-gallery img {
+    height: 182px;
+    width: 190px;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .program-wrapper .program-box {
+    display: block;
+  }
+  .program-wrapper .program-box .program-desc, .program-wrapper .program-box .program-gallery {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .program-wrapper .program-box .program-gallery img {
+    height: 154px;
+    width: 159px;
+  }
+
+  .initiative-card {
+    width: calc(100% - 40px) !important;
+    width-max-width: 300px !important;
+  }
 }
 
 /*# sourceMappingURL=productsTheme.css.map */

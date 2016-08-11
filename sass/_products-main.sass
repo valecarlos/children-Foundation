@@ -15,6 +15,7 @@
 
 .stem-intro, .stem-detail
   max-width: 1100px
+  padding: 0px 20px
   margin: auto
   color: $text-main
   font-family: $font-stack
@@ -42,14 +43,18 @@
   .program-box
     max-width: 1100px
     margin: auto
-  
+    display: flex
+
+    &.reversed
+      flex-direction: row-reverse
+
     h1
       font-family: $font-products
 
     .program-gallery
       width: 50%
       padding: 10px
-      float: left
+      //float: left
       text-align: center
 
       img
@@ -61,7 +66,7 @@
     .program-desc
       text-align: center
       width: 50%
-      float: left
+      //float: left
       padding: 20px
 
       h1
@@ -120,7 +125,7 @@
 .initiatives-section
   max-width: 1100px
   margin: auto
-  padding: 15px 0px
+  padding: 15px 20px
   text-align: center
 
   &>h1
@@ -128,14 +133,18 @@
     margin: 10px 0px
 
   .initiative-card
-    margin: 0px 10px
+    margin: 10px
     vertical-align: top
     display: inline-block
     width: 300px
     padding: 20px 14px
-    border: solid 2px #bbbbbb
+    //border: solid 2px #bbbbbb
     color: $text-main
     transition: all 0.3s ease-in-out
+
+    &.wide
+      width: calc(100% - 40px)
+      max-width: 600px
 
     &:hover
       border-color: $second-color
@@ -145,6 +154,7 @@
 
     img
       width: 100%
+      max-width: 272px
       height: 190px
     p
       padding: 5px 0px
@@ -162,3 +172,23 @@
         background-color: $second-color
         color: white
 
+@media only screen and (max-width: 1021px)
+  .program-wrapper .program-box .program-gallery img
+    height: 182px
+    width: 190px
+
+@media only screen and (max-width: 860px)
+  .program-wrapper .program-box
+    display: block
+
+    .program-desc, .program-gallery
+      width: 100%
+
+@media only screen and (max-width: 580px)
+  .program-wrapper .program-box .program-gallery img
+    height: 154px
+    width: 159px
+
+  .initiative-card
+    width: calc(100% - 40px) !important
+      max-width: 300px !important

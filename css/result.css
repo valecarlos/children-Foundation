@@ -22,6 +22,36 @@ a {
   clear: both;
 }
 
+.under-construction {
+  display: block;
+  text-align: center;
+  height: 0px;
+  padding-top: 15px;
+  animation-name: construction-animation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+@keyframes construction-animation {
+  0% {
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    height: 60px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .top-wrapper {
   position: fixed;
   z-index: 5;
@@ -36,8 +66,11 @@ a {
 }
 
 .top {
+  animation-name: margin-top-animation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
   height: 3px;
-  background: repeating-linear-gradient(90deg, #F44336 0%, #F44336 25%, #009688 25%, #009688 50%, #9C27B0 50%, #9C27B0 75%, #FFC107 75%, #FFC107 100%);
+  background: repeating-linear-gradient(90deg, #2e8ab3 0%, #2e8ab3 25%, #33658A 25%, #33658A 50%, #2e8ab3 50%, #2e8ab3 75%, #33658A 75%, #33658A 100%);
   background-size: 50% 100%;
 }
 
@@ -47,7 +80,6 @@ a {
 
 .navigation {
   margin: 10px 4em;
-  overflow: auto;
 }
 .navigation .burger-nav {
   margin-right: 10px;
@@ -82,6 +114,19 @@ a {
   margin-right: 1em;
   position: relative;
 }
+.navigation .menu li.dropdown .dropdown-content {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transform-origin: top left;
+}
+.navigation .menu li.dropdown:hover .dropdown-content {
+  display: block;
+  animation-name: hover-animation;
+  animation-duration: 0.3s;
+}
 .navigation .menu li a {
   display: block;
   padding: 15px 15px;
@@ -94,7 +139,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #9C27B0;
+  background-color: #2e8ab3;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -106,7 +151,7 @@ a {
 
 .donar {
   color: white !important;
-  background-color: #F44336;
+  background-color: #2e8ab3;
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
 }
@@ -143,9 +188,9 @@ a {
   margin: 15px 0px 20px;
 }
 .header .header-title a {
-  background-color: #009a8b;
+  background-color: #34678d;
   color: white;
-  border: 2px solid #009a8b;
+  border: 2px solid #34678d;
   padding: 14px 24px;
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -202,6 +247,24 @@ h1.subtitle {
     padding: 12px;
   }
 }
+@keyframes hover-animation {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes margin-top-animation {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 60px;
+  }
+}
 footer {
   border-top: solid 2px lightgray;
   text-align: center;
@@ -215,6 +278,7 @@ footer p {
 
 .footer-menu li {
   display: inline-block;
+  margin-top: 10px;
 }
 .footer-menu li a {
   color: #7b7b7b;
@@ -250,7 +314,7 @@ footer p {
   display: inline-block;
   border: none;
   height: 2px;
-  background-color: #009688;
+  background-color: #33658A;
   width: 25%;
 }
 .blog-links h1 {
@@ -264,13 +328,13 @@ footer p {
   margin: 10px 0px 15px;
   display: inline-block;
   padding: 10px;
-  color: #009688;
-  border: solid 2px #009688;
+  color: #33658A;
+  border: solid 2px #33658A;
   transition: all 0.3s ease-in-out;
 }
 .blog-links .view-more a:hover {
   color: white;
-  background-color: #009688;
+  background-color: #33658A;
 }
 
 .news-wrapper {
@@ -284,7 +348,7 @@ footer p {
   position: absolute;
   top: 5px;
   transform: translateX(-15px);
-  border: 3px solid #009688;
+  border: 3px solid #33658A;
   border-radius: 8px;
   width: 54px;
   background-color: #efefef;
@@ -294,7 +358,7 @@ footer p {
 .news-wrapper .news-date .news-day {
   background-color: white;
   border-radius: 8px;
-  color: #009688;
+  color: #33658A;
   font-weight: bold;
   font-size: 26px;
   margin-bottom: 4px;
@@ -302,7 +366,7 @@ footer p {
 .news-wrapper .news-date .news-month {
   border-radius: 4px;
   background-color: white;
-  color: #009688;
+  color: #33658A;
   font-weight: 700;
 }
 .news-wrapper .news-card {
@@ -343,7 +407,7 @@ footer p {
   .news-wrapper .news-date {
     top: 4px;
     transform: translateX(-10px);
-    border: 2px solid #009688;
+    border: 2px solid #33658A;
     width: 47px;
     padding: 3px;
     z-index: 3;
@@ -374,7 +438,7 @@ footer p {
   display: inline-block;
   border: none;
   height: 2px;
-  background-color: #9C27B0;
+  background-color: #2e8ab3;
   width: 25%;
 }
 .about h1 {
@@ -388,14 +452,14 @@ footer p {
   margin: 10px 0px 15px;
   display: inline-block;
   padding: 10px;
-  color: #9C27B0;
-  border: solid 2px #9C27B0;
+  color: #2e8ab3;
+  border: solid 2px #2e8ab3;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .about .view-more > a:hover {
   color: white;
-  background-color: #9C27B0;
+  background-color: #2e8ab3;
 }
 
 .about-wrapper {
@@ -431,7 +495,7 @@ footer p {
 .extended-container #back-about-button {
   display: inline-block;
   padding: 12px;
-  color: #9C27B0;
+  color: #2e8ab3;
   font-size: 28px;
   cursor: pointer;
 }
@@ -444,7 +508,7 @@ footer p {
   display: inline-block;
   border: none;
   height: 2px;
-  background-color: #F44336;
+  background-color: #2e8ab3;
   width: 25%;
 }
 .contributors-section h1 {
@@ -460,14 +524,14 @@ footer p {
   padding: 15px;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
-  border: 2px solid #F44336;
-  background-color: #F44336;
+  border: 2px solid #2e8ab3;
+  background-color: #2e8ab3;
   color: white;
 }
 .contributors-section .boton-donar:hover {
   background-color: transparent;
-  border-color: #F44336;
-  color: #F44336;
+  border-color: #2e8ab3;
+  color: #2e8ab3;
 }
 
 .slider-controls {
@@ -490,7 +554,7 @@ footer p {
 }
 .slider-controls #slider-left svg polyline {
   transition: all 0.3s ease-in-out;
-  stroke: #F44336;
+  stroke: #2e8ab3;
 }
 .slider-controls #slider-left:hover svg polyline {
   stroke-width: 3;
@@ -504,7 +568,7 @@ footer p {
 }
 .slider-controls #slider-right svg polyline {
   transition: all 0.3s ease-in-out;
-  stroke: #F44336;
+  stroke: #2e8ab3;
 }
 .slider-controls #slider-right:hover svg polyline {
   stroke-width: 3;
@@ -578,7 +642,7 @@ footer p {
   display: inline-block;
   border: none;
   height: 2px;
-  background-color: #9C27B0;
+  background-color: #2e8ab3;
   width: 25%;
 }
 .programs-section h1 {

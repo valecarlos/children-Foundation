@@ -9,6 +9,9 @@
   <link rel="stylesheet" type="text/css" href="css/newsTheme.css">
 </head>
 <body ng-app="newsModule">
+	<div class="under-construction">
+		<p>Esta Página se encuentra en construcción!</p>
+	</div>
 		<div class="top"></div>
 			<div class="nav-wrapper">
 			  <div class="navigation">
@@ -38,7 +41,13 @@
 			      <li class="active"><a href="news.html">Noticias</a></li>
 			      <li><a href="programs.html">Programas</a></li>
 			      <li><a href="about.html">Quienes Somos</a></li>
-			      <li><a href="contact.html">Contactanos</a></li>
+			      <li class="dropdown">
+			      	<a href="contact.html">Contáctanos</a>
+			      	<div class="dropdown-content">
+			      		<a href="contact.html">Contacto</a>
+			      		<a href="">Oportunidades</a>
+			      	</div>
+			      </li>
 			      <li><a class="donar" href="">DONA AHORA</a></li>
 			    </ul>
 			</div>
@@ -94,7 +103,7 @@
 	      <li><a href="news.html">Noticias</a></li>
 	      <li><a href="programs.html">Programas</a></li>
 	      <li><a href="about.html">Quienes Somos</a></li>
-	      <li><a href="contact.html">Contactanos</a></li>
+	      <li><a href="contact.html">Contáctanos</a></li>
 	    </ul>
 		<p>©2016. Todos los derechos reservados.</p>
 	</footer>
