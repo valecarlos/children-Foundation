@@ -325,6 +325,32 @@ footer p {
   margin-bottom: 15px;
 }
 
+.program-icons {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+.program-icons h2 {
+  padding: 0px 20px 20px 20px;
+  color: #545454;
+}
+.program-icons .icon-card {
+  vertical-align: top;
+  display: inline-block;
+  margin: 10px 20px;
+  max-width: 200px;
+}
+.program-icons .icon-card .icon-container svg {
+  width: 150px;
+  height: 150px;
+}
+.program-icons .icon-card .icon-caption {
+  margin-top: 7px;
+  color: #696969;
+  font-weight: 500;
+}
+
 .program-wrapper {
   padding: 20px 0px;
 }
@@ -429,6 +455,7 @@ footer p {
   display: inline-block;
   width: 300px;
   padding: 20px 14px;
+  border: solid 2px #bbbbbb;
   color: #696969;
   transition: all 0.3s ease-in-out;
 }
@@ -477,6 +504,11 @@ footer p {
   .program-wrapper .program-box .program-desc, .program-wrapper .program-box .program-gallery {
     width: 100%;
   }
+
+  .program-icons .icon-card .icon-container svg {
+    width: 120px;
+    height: 120px;
+  }
 }
 @media only screen and (max-width: 580px) {
   .program-wrapper .program-box .program-gallery img {
@@ -487,6 +519,11 @@ footer p {
   .initiative-card {
     width: calc(100% - 40px) !important;
     width-max-width: 300px !important;
+  }
+
+  .program-icons .icon-card .icon-container svg {
+    width: 94px;
+    height: 94px;
   }
 }
 
