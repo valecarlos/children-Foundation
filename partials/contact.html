@@ -1,0 +1,51 @@
+<header class="news-header">
+		<h1 class="title">Contáctanos</h1>
+	</header>
+	<section class="contact-section">
+		<div class="mail-container">
+			<h3>Puedes contactarnos en este correo:</h3>
+			<p class="mail-display">info@crearconciencia.org</p>
+		</div>
+		<div class="summary">
+			<h3>Contáctanos sobre:</h3>
+			<h5>Preguntas Generales</h5>
+			<h5>Programas</h5>
+			<ul>
+				<li>Campo de Herramientas</li>
+				<li>Campo de Imaginacion</li>
+			</ul>
+			<h5>Otras Iniciativas</h5>
+			<ul>
+				<li>Asesoría Familiar</li>
+				<li>Material didáctico y pedagógico</li>
+				<li><p>Banco de Juguetes</p>
+					<p>Ayúdanos a liderar una actividad para recolectar los juguetes en tu conjunto, empresa, colegio o jardín. Agendaremos esta actividad y recogeremos los juguetes en el sitio de la recolecta.</p>
+					<p>Recibimos juguetes en nuestras oficinas en Chía los días <span>lunes de 8:00 am a 4:00 pm.</span></p>
+					<p>Dirección: Calle 19 # 13-20, Chía</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.422185477828!2d-74.06131708514496!3d4.868718841533148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e407875d4c9cfc1%3A0x13eef724450caccd!2sCl.+19+%2313-20%2C+Ch%C3%ADa%2C+Cundinamarca!5e0!3m2!1sen!2sco!4v1470885935145" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</li>
+				</ul>
+			<h5>Oportunidades de Voluntariado</h5>
+		</div>
+
+		</div>
+		<div class="form-container">
+			<h3>O si lo prefieres puedes diligenciar este formulario, y nos comunicaremos contigo lo más pronto posible!</h3>
+			<form id="ajax-contact" method="post" action="php/index.php">
+				<div class="form-group">
+				    <label for="InputName">Nombre</label>
+				    <input type="text" class="form-control" id="InputName" name="name" placeholder="Nombre">
+				</div>
+				<div class="form-group">
+				    <label for="InputEmail">Correo Electronico</label>
+				    <input type="email" class="form-control" id="InputEmail" name="email" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<label for="comment">Tu Mensaje:</label>
+					<textarea class="form-control" rows="5" id="comment" name="message" placeholder="Envianos tus preguntas o comentarios"></textarea>
+				</div>
+				<button type="submit" name="submit" value="Submit" class="btn btn-default">Enviar</button>
+			</form>
+			<div id="form-messages"></div>
+		</div>
+	</section>

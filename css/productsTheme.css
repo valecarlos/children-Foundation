@@ -243,8 +243,38 @@ h1.subtitle {
     text-align: center;
     background-color: white;
   }
+  .navigation .menu li.dropdown .dropdown-content {
+    display: block;
+    position: relative;
+  }
   .navigation .menu li a {
     padding: 12px;
+  }
+}
+.ng-view.ng-enter {
+  z-index: 8888;
+  animation: fade-in 0.4s both ease-in;
+}
+
+.ng-view.ng-leave {
+  animation: fade-out 0.2s both ease-in;
+  z-index: 9999;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes hover-animation {

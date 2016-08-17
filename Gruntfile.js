@@ -11,7 +11,8 @@ module.exports = function(grunt){
 	        'css/newsTheme.css': 'sass/newsTheme.sass',
 	        'css/productsTheme.css': 'sass/productsTheme.sass',
 	        'css/aboutTheme.css': 'sass/aboutTheme.sass',
-	        'css/contactTheme.css': 'sass/contactTheme.sass'
+	        'css/contactTheme.css': 'sass/contactTheme.sass',
+	        'css/finalTheme.css': 'sass/finalTheme.sass'
 	      }
 	    }
 	  },

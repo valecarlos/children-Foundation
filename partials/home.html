@@ -1,0 +1,153 @@
+<section class="header">
+		<div class="header-img"></div>
+		<div class="header-title">
+			<h1>CREAR CONCIENCIA</h1>
+			<p>Creamos oportunidades llevando ciencia y juego a los niños</p>
+			<a href="#/programs">Programas</a>
+		</div>
+	</section>
+	<section class="icons">
+		<div class="icon-card">
+			<div class="icon-container">
+				<img src="img/woman-with-kids.svg">
+			</div>
+			<div class="icon-caption">
+				<p>Creamos espacios asequibles que integran a las familias en torno a la ciencia y el juego.</p>
+			</div>
+		</div>
+		<div class="icon-card">
+			<div class="icon-container">
+				<img src="img/learning.svg">
+			</div>
+			<div class="icon-caption">
+				<p>Promovemos espacios que incentivan la imaginación y la curiosidad.</p>
+			</div>
+		</div>
+		<div class="icon-card">
+			<div class="icon-container">
+			<img src="img/family-of-four-in-front-of-their-home.svg">			
+			</div>
+			<div class="icon-caption">
+				<p>Damos nuevas herramientas a los padres y educadores para estimular el aprendizaje en el hogar.</p>
+			</div>
+		</div>
+	</section>
+	<section class="blog-links">
+		<hr align="center">
+		<h1 class="title">NOTICIAS</h1>
+		<a href="#/news" ng-attr-id="{{'article-' + article.index}}" ng-repeat="article in newsArticles | limitTo:3">
+			<div class="news-wrapper">
+				<div class="news-date">
+					<div class="news-day" ng-bind="article.registered | date:'dd'"></div>
+					<div class="news-month" ng-bind="article.registered | date:'MMM'"></div>
+				</div>
+				<div class="news-card" ng-style="{'background-image':'url('+ article.imgPath +')'}">
+					<div class="news-caption"><strong>
+						{{article.title}}
+						</strong>
+						<p class="news-summary">{{article.body | limitTo: 90 }}{{article.body.length > 90 ? '...' : ''}}</p>
+					</div>
+				</div>
+				<p class="news-body">{{article.body | limitTo: 105 }}{{article.body.length > 105 ? '...' : ''}}</p>
+			</div>
+		</a>
+		<div class="view-more">
+			<a href="#/news">Ver Mas</a>
+		</div>	
+	</section>
+	
+	<section class="programs-section">
+		<div class="clearfix">
+			<hr>
+			<h1 class="title">Nuestros Programas</h1>
+			<div class="program-container">
+				<a href="#/programs#campoImaginacion">
+					<div class="program-image imaginacion">
+						<h1 class="subtitle">Campo de Imaginación</h1>
+						<div class="program-body">
+							<p>Se basa en la teoría de las partes sueltas. Permite que el niño desarrolle una idea, transforme y cree su propio espacio de juego; se desarrolla en un ambiente seguro, relajado y estimulante, en el que el niño se puede mover libremente, escoger sus compañeros de juego y en donde encuentra objetos que puede manipular, organizar y con los que puede construir innumerables cosas.</p>
+							<div href="#/programs#campoImaginacion">Mas Información</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="program-container">
+				<a href="#/programs#campoHerramientas">
+					<div class="program-image herramientas">
+						<h1 class="subtitle">Campo de herramientas</h1>
+						<div class="program-body">
+							<p>Es el programa que agrupa los diferentes talleres que la fundación ofrece a padres, educadores y cuidadores para darles ideas y recursos innovadores que permitan extender a sus hogares y aulas las experiencias generadas en las actividades lideradas por la fundación. </p>
+							<div href="#/programs#campoHerramientas">Mas Información</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="about">
+		<hr align="center">
+		<h1 class="title">QUIENES SOMOS</h1>
+		<div class="about-wrapper-section clearfix">
+			<div class="about-main">
+				<p class="about-p">Somos un emprendimiento social. Estamos constituidos como una organización sin ánimo de lucro que ofrece espacios de juego de descubrimiento para niños de 0 a 5 años, y capacitación para padres de familia y educadores, con el objetivo de ayudar a reducir las brechas en el desarrollo de habilidades sociales y cognitivas de los niños colombianos.
+				</p>
+				<div class="view-more">
+					<a href="#/about">Ver Mas</a>
+				</div>
+			</div>
+			<div class="about-extended">
+				<div class="extended-container">
+
+					<h1><div id="back-about-button"><</div>This is the extended about section</h1>
+					<p class="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus augue, sollicitudin nec porta a, convallis sed sem. Aenean sed erat ornare, euismod nisl quis, faucibus metus. Sed sit amet arcu efficitur, aliquet odio non, iaculis nunc. Vestibulum non lectus et ipsum suscipit dapibus. Donec et orci eget risus viverra iaculis. Praesent fermentum scelerisque risus vel vulputate. Vivamus et iaculis diam. Mauris feugiat pellentesque ligula quis sodales. Integer felis eros, aliquam pulvinar euismod non, lacinia quis lectus. Cras mollis luctus semper.</p>
+					</div>
+			</div>
+		</div>
+	</section>
+	<section class="contributors-section">
+		<div>
+			<hr align="center">
+			<h1 class="title">HAY MUCHAS FORMAS DE AYUDAR</h1>
+			<div class="slider-controls">
+				<div id="slider-left">
+					<svg xml:space="preserve">
+					    <polyline fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+						45.63,75.8 0.375,38.087 45.63,0.375 "/>
+					  </svg>
+					</div>
+				<div id="slider-right">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+				    <polyline fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+					0.375,0.375 45.63,38.087 0.375,75.8 "/>
+				  </svg>
+				</div>
+				<div class="slider-container">
+					<div class="slider-wrapper clearfix">
+						<div class="slider-card">
+							<img class="contrib-image" src="img/contributors/Dom.jpg">
+							<div class="contrib-caption">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus augue.
+								<p>- Dominic</p>
+							</div>
+						</div>
+						<div class="slider-card">
+							<img class="contrib-image" src="img/contributors/Dom.jpg">
+							<div class="contrib-caption">
+								Aenean sed erat ornare, euismod nisl quis, faucibus metus.
+								<p>- Dominic</p>
+							</div>
+						</div>
+						<div class="slider-card">
+							<img class="contrib-image" src="img/contributors/Dom.jpg">
+							<div class="contrib-caption">
+								Vivamus et iaculis diam. Mauris feugiat pellentesque ligula quis sodales. Integer felis eros, aliquam pulvinar euismod non, lacinia quis lectus. Cras mollis luctus semper.
+								<p>- Dominic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>Conviertete en uno de nuestros contribuidores!</p>
+			<a class="boton-donar" href="">Oportunidades de Voluntariado</a>
+		</div>
+	</section>
