@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="newsModule">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fundacion</title>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Oleo+Script:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/result.css">
+  <link rel="stylesheet" type="text/css" href="css/finalTheme.css">
 </head>
 <body>
 	<div class="under-construction">
 		<p>Esta Página se encuentra en construcción!</p>
 	</div>
 		<div class="top"></div>
-		<div class="nav-wrapper">
+		<div class="nav-wrapper" ng-controller="headerController">
 		  	<div class="navigation">
 			    <div class="main-icon">
 			    	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -32,20 +31,20 @@
 					<text id="XMLID_5_" transform="matrix(1 0 0 1 1971.7202 2198.2344)" class="st2 st3">V</text>
 					</svg>
 			    </div>
-			    <button id="slideMenuButton" class="burger-nav">
+			    <button id="slideMenuButton" class="burger-nav" ng-click="burgerShow = !burgerShow">
 					<span class="menu-bar"></span>
 					<span class="menu-bar"></span>
 					<span class="menu-bar"></span>
 				</button>
-			    <ul class="menu">
-			      <li class="active"><a href="index.html">Inicio</a></li>
-			      <li><a href="news.html">Noticias</a></li>
-			      <li><a href="programs.html">Programas</a></li>
-			      <li><a href="about.html">Quienes Somos</a></li>
-			      <li class="dropdown">
-			      	<a href="contact.html">Contáctanos</a>
+			    <ul class="menu" ng-class="{'show-me' : burgerShow}">
+			      <li ng-class="currentView == 'home' ? 'active' : ''"><a href="#/home">Inicio</a></li>
+			      <li ng-class="currentView == 'news' ? 'active' : ''"><a href="#/news">Noticias</a></li>
+			      <li ng-class="currentView == 'programs' ? 'active' : ''"><a href="#/programs">Programas</a></li>
+			      <li ng-class="currentView == 'about' ? 'active' : ''"><a href="#/about">Quienes Somos</a></li>
+			      <li ng-class="currentView == 'contact' ? 'active' : ''" class="dropdown">
+			      	<a href="#/contact">Contáctanos</a>
 			      	<div class="dropdown-content">
-			      		<a href="contact.html">Contacto</a>
+			      		<a href="#/contact">Contacto</a>
 			      		<a href="">Oportunidades</a>
 			      	</div>
 			      </li>
@@ -54,199 +53,23 @@
 			</div>
 		</div>
 
-	<section class="header">
-		<div class="header-img"></div>
-		<div class="header-title">
-			<h1>CREAR CONCIENCIA</h1>
-			<p>Creamos oportunidades llevando ciencia y juego a los niños</p>
-			<a href="programs.html">Programas</a>
-		</div>
-	</section>
-	<section class="icons">
-		<div class="icon-card">
-			<div class="icon-container">
-				<img src="img/woman-with-kids.svg">
-			</div>
-			<div class="icon-caption">
-				<p>Promovemos espacios que incentivan la imaginación y la curiosidad.</p>
-			</div>
-		</div>
-		<div class="icon-card">
-			<div class="icon-container">
-				<img src="img/learning.svg">
-			</div>
-			<div class="icon-caption">
-				<p>Creamos espacios asequibles que integran a las familias en torno a la ciencia y el juego.</p>
-			</div>
-		</div>
-		<div class="icon-card">
-			<div class="icon-container">
-			<img src="img/family-of-four-in-front-of-their-home.svg">			
-			</div>
-			<div class="icon-caption">
-				<p>Damos nuevas herramientas a los padres y educadores para estimular el aprendizaje en el hogar.</p>
-			</div>
-		</div>
-	</section>
-	<section class="blog-links">
-		<hr align="center">
-		<h1 class="title">NOTICIAS</h1>
-		<a href="news.html">
-			<div class="news-wrapper">
-				<div class="news-date">
-					<div class="news-day">13</div>
-					<div class="news-month">ABR</div>
-				</div>
-				<div class="news-card">
-					<div class="news-caption"><strong>
-						this is my news header
-						</strong>
-					</div>
-				</div>
-				<p class="news-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam libero ut dictum sodales. Nunc placerat interdum laoreet. Morbi scelerisque arcu in mi condimentum, a vulputate tortor bibendum.</p>
-			</div>
-		</a>
-		<a href="news.html">
-			<div class="news-wrapper">
-				<div class="news-date">
-					<div class="news-day">25</div>
-					<div class="news-month">JUN</div>
-				</div>
-				<div class="news-card">
-					<div class="news-caption"><strong>
-						this is my news header
-						</strong>
-					</div>
-				</div>
-				<p class="news-body">Proin pharetra sagittis libero, eu dapibus elit tincidunt vitae. Suspendisse faucibus pulvinar sem vel accumsan. Aliquam id ante nulla. Nulla ornare metus justo, ac rutrum ante sodales in.</p>
-			</div>
-		</a>
-		<a href="news.html">
-			<div class="news-wrapper">
-				<div class="news-date">
-					<div class="news-day">25</div>
-					<div class="news-month">JUN</div>
-				</div>
-				<div class="news-card">
-					<div class="news-caption"><strong>
-						this is my news header
-						</strong>
-					</div>
-				</div>
-				<p class="news-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam libero ut dictum sodales. Nunc placerat interdum laoreet. Morbi scelerisque arcu in mi condimentum, a vulputate tortor bibendum.</p>
-			</div>
-		</a>
-		<div class="view-more">
-			<a href="news.html">Ver Mas</a>
-		</div>	
-	</section>
+	<div class="ng-view" autoscroll="true"></div>
 	
-	<section class="programs-section">
-		<div class="clearfix">
-			<hr>
-			<h1 class="title">Nuestros Programas</h1>
-			<div class="program-container">
-				<a href="programs.html#campoImaginacion">
-					<div class="program-image imaginacion">
-						<h1 class="subtitle">Campo de Imaginación</h1>
-						<div class="program-body">
-							<p>Se basa en la teoría de las partes sueltas. Permite que el niño desarrolle una idea, transforme y cree su propio espacio de juego; se desarrolla en un ambiente seguro, relajado y estimulante, en el que el niño se puede mover libremente, escoger sus compañeros de juego y en donde encuentra objetos que puede manipular, organizar y con los que puede construir innumerables cosas.</p>
-							<div href="programs.html#campoImaginacion">Mas Información</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="program-container">
-				<a href="programs.html#campoHerramientas">
-					<div class="program-image herramientas">
-						<h1 class="subtitle">Campo de herramientas</h1>
-						<div class="program-body">
-							<p>Es el programa que agrupa los diferentes talleres que la fundación ofrece a padres, educadores y cuidadores para darles ideas y recursos innovadores que permitan extender a sus hogares y aulas las experiencias generadas en las actividades lideradas por la fundación. </p>
-							<div href="programs.html#campoHerramientas">Mas Información</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-	<section class="about">
-		<hr align="center">
-		<h1 class="title">QUIENES SOMOS</h1>
-		<div class="about-wrapper clearfix">
-			<div class="about-main">
-				<p class="about-p">Somos un emprendimiento social. Estamos constituidos como una organización sin ánimo de lucro que ofrece espacios de juego de descubrimiento para niños de 0 a 5 años, y capacitación para padres de familia y educadores, con el objetivo de ayudar a reducir las brechas en el desarrollo de habilidades sociales y cognitivas de los niños colombianos.
-				</p>
-				<div class="view-more">
-					<a href="about.html">Ver Mas</a>
-				</div>
-			</div>
-			<div class="about-extended">
-				<div class="extended-container">
-
-					<h1><div id="back-about-button"><</div>This is the extended about section</h1>
-					<p class="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus augue, sollicitudin nec porta a, convallis sed sem. Aenean sed erat ornare, euismod nisl quis, faucibus metus. Sed sit amet arcu efficitur, aliquet odio non, iaculis nunc. Vestibulum non lectus et ipsum suscipit dapibus. Donec et orci eget risus viverra iaculis. Praesent fermentum scelerisque risus vel vulputate. Vivamus et iaculis diam. Mauris feugiat pellentesque ligula quis sodales. Integer felis eros, aliquam pulvinar euismod non, lacinia quis lectus. Cras mollis luctus semper.</p>
-					</div>
-			</div>
-		</div>
-	</section>
-	<section class="contributors-section">
-		<div>
-			<hr align="center">
-			<h1 class="title">HAY MUCHAS FORMAS DE AYUDAR</h1>
-			<div class="slider-controls">
-				<div id="slider-left">
-					<svg xml:space="preserve">
-					    <polyline fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
-						45.63,75.8 0.375,38.087 45.63,0.375 "/>
-					  </svg>
-					</div>
-				<div id="slider-right">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
-				    <polyline fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
-					0.375,0.375 45.63,38.087 0.375,75.8 "/>
-				  </svg>
-				</div>
-				<div class="slider-container">
-					<div class="slider-wrapper clearfix">
-						<div class="slider-card">
-							<img class="contrib-image" src="img/contributors/Dom.jpg">
-							<div class="contrib-caption">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus augue.
-								<p>- Dominic</p>
-							</div>
-						</div>
-						<div class="slider-card">
-							<img class="contrib-image" src="img/contributors/Dom.jpg">
-							<div class="contrib-caption">
-								Aenean sed erat ornare, euismod nisl quis, faucibus metus.
-								<p>- Dominic</p>
-							</div>
-						</div>
-						<div class="slider-card">
-							<img class="contrib-image" src="img/contributors/Dom.jpg">
-							<div class="contrib-caption">
-								Vivamus et iaculis diam. Mauris feugiat pellentesque ligula quis sodales. Integer felis eros, aliquam pulvinar euismod non, lacinia quis lectus. Cras mollis luctus semper.
-								<p>- Dominic</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<p>Conviertete en uno de nuestros contribuidores!</p>
-			<a class="boton-donar" href="">Oportunidades de Voluntariado</a>
-		</div>
-	</section>
 	<footer>
 		<ul class="footer-menu">
-	      <li><a href="index.html">Inicio</a></li>
-	      <li><a href="news.html">Noticias</a></li>
-	      <li><a href="programs.html">Programas</a></li>
-	      <li><a href="about.html">Quienes Somos</a></li>
-	      <li><a href="contact.html">Contáctanos</a></li>
+	      <li><a href="#/index">Inicio</a></li>
+	      <li><a href="#/news">Noticias</a></li>
+	      <li><a href="#/programs">Programas</a></li>
+	      <li><a href="#/about">Quienes Somos</a></li>
+	      <li><a href="#/contact">Contáctanos</a></li>
 	    </ul>
 		<p>©2016. Todos los derechos reservados.</p>
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/newsScript.js"></script>
 	<script src="js/myScript.js"></script>
 </body>
 </html>

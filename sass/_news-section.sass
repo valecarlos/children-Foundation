@@ -64,6 +64,7 @@
     overflow: hidden
     width: 340px
     height: 210px
+    position: relative
     background: url('../img/bicycle.jpg')
       size: cover
 
@@ -73,17 +74,28 @@
     .news-caption
       width: 340px
       height: 210px
-      background-color: rgba(0,0,0,0.45)
-      transform: translateY(75%)
-      transition: all 0.8s ease-in-out
+      background-color: rgba(0,0,0,0.73)
+      transform: translateY(65%)
+      transition: all 0.7s ease-in-out
 
       strong
         display: block
         text-align: center
-        padding: 10px
+        padding: 20px 10px 10px
         color: white
         text-transform: uppercase
-        font-weight: 300
+        font-weight: 500
+
+      .news-summary
+        color: white
+        padding: 0px 15px
+        line-height: 1.2em
+        height: 3.6em
+        position: absolute
+        width: 100%
+        bottom: 0px
+        overflow: hidden
+
 
   .news-body
     color: $text-main
