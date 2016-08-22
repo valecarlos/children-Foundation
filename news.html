@@ -72,13 +72,16 @@
 					<input type="text" placeholder="Por ejem.: Eventos, Lanzamiento, etc." ng-model="searchText">
 				</div>
 				<div>
-					<div ng-attr-id="{{'article-' + article.index}}" class="news-main" ng-repeat="article in newsArticles | filter:searchText">
+					<div ng-attr-id="{{'article-' + article.index}}" class="clearfix news-main" ng-repeat="article in newsArticles | filter:searchText">
 						<h1 class="subtitle">{{article.title}}</h1>
-						<img class="news-main-img" ng-src="{{article.imgPath}}" ng-show="article.imgPath.length" >
-						<div class="news-body">
-							<p>
-								{{article.body}}
-							</p>
+						<p class="date">publicado: {{article.registered | date : 'dd/MM/yyyy'}}</p>
+						<div class="clearfix">
+							<img class="news-main-img" ng-src="{{article.imgPath}}" ng-show="article.imgPath.length">
+							<div class="news-body">
+								<p>
+									{{article.body}}
+								</p>
+							</div>
 						</div>	
 						<div class="tags">
 							<label>Tags:</label>

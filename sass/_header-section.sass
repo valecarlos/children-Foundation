@@ -189,6 +189,7 @@ h1.subtitle
       
       li 
         margin-right: 5px
+
         a
           padding: 10px 
 
@@ -212,6 +213,17 @@ h1.subtitle
         display: block
         text-align: center
         background-color: white
+
+        &:before
+          display: none
+
+        &.dropdown .dropdown-content
+          display: block
+          position: relative
+
+          a:first-child
+            display: none
+
         a
           padding: 12px 
 

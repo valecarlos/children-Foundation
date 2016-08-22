@@ -243,6 +243,16 @@ h1.subtitle {
     text-align: center;
     background-color: white;
   }
+  .navigation .menu li:before {
+    display: none;
+  }
+  .navigation .menu li.dropdown .dropdown-content {
+    display: block;
+    position: relative;
+  }
+  .navigation .menu li.dropdown .dropdown-content a:first-child {
+    display: none;
+  }
   .navigation .menu li a {
     padding: 12px;
   }
@@ -294,7 +304,7 @@ footer p {
   vertical-align: top;
   display: inline-block;
   margin: 10px 20px;
-  max-width: 200px;
+  max-width: 225px;
 }
 .icon-card img {
   width: 110px;
@@ -382,17 +392,25 @@ footer p {
 .news-wrapper .news-card .news-caption {
   width: 340px;
   height: 210px;
-  background-color: rgba(0, 0, 0, 0.45);
-  transform: translateY(75%);
+  background-color: rgba(0, 0, 0, 0.73);
+  transform: translateY(65%);
   transition: all 0.8s ease-in-out;
+  position: relative;
 }
 .news-wrapper .news-card .news-caption strong {
   display: block;
   text-align: center;
   padding: 10px;
+  padding-top: 20px;
   color: white;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 500;
+}
+.news-wrapper .news-card .news-caption p {
+  color: white;
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
 }
 .news-wrapper .news-body {
   color: #696969;
@@ -711,6 +729,45 @@ footer p {
   }
   .program-container .program-image .program-body {
     line-height: 150%;
+  }
+}
+.loader {
+  color: #79d5e8;
+  font-size: 20px;
+  margin: 100px auto;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: load4 1.3s infinite linear;
+  transform: translateZ(0);
+}
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
 

@@ -243,6 +243,16 @@ h1.subtitle {
     text-align: center;
     background-color: white;
   }
+  .navigation .menu li:before {
+    display: none;
+  }
+  .navigation .menu li.dropdown .dropdown-content {
+    display: block;
+    position: relative;
+  }
+  .navigation .menu li.dropdown .dropdown-content a:first-child {
+    display: none;
+  }
   .navigation .menu li a {
     padding: 12px;
   }

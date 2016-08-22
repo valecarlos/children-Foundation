@@ -1,4 +1,9 @@
 $( document ).ready(function() {
+	loadNews();
+	$("#slideMenuButton").click(function(event){
+    	$('.menu').toggleClass('show-me');
+    });
+
 	/*
 	console.log("im here");
     $("#about-button").click(function(event){
@@ -13,8 +18,43 @@ $( document ).ready(function() {
     });
 	*/
 	mySlider = new Slider;
-	//setInterval(mySlider.goRight, 1000);
 });
+
+function loadNews(){
+	var myLength = 100;
+	var spinner = '<div class="loader">Loading...</div>';
+	var $newsContainer = $('#blog-links');
+	
+	$newsContainer.append(spinner);
+	
+	$.ajax({
+		type: 'GET',
+		url: '/data/news_mock.json',
+		success: function(data){
+			$newsContainer.empty();
+			$.each(data, function(i, article){
+				$newsContainer.append('<a href="news.html">' +
+			'<div class="news-wrapper">' +
+				'<div class="news-date">' +
+					'<div class="news-day">'+ moment(article.registered).format('DD') +'</div>' +
+					'<div class="news-month">'+ moment(article.registered).format('MMM') +'</div>'+
+				'</div>' +
+				'<div class="news-card" style="background-image: url('+ article.imgPath +')">' +
+					'<div class="news-caption"><strong>' +
+						article.title +
+						'</strong>' +	
+						'<p>'+ article.body.substring(0, myLength + 10) + '...' + '</p>' +
+					'</div>' +
+				'</div>' +
+				'<p class="news-body">' +
+				article.body.substring(0,myLength) + '...' +
+				'</p>' +
+			'</div>' +
+		'</a>')
+			});
+		}
+	});
+}
 
 var Slider = function(){
 	var slides = $(".slider-wrapper").find(".slider-card").length - 1
