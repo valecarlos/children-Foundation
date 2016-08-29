@@ -31,12 +31,12 @@
 					<text id="XMLID_5_" transform="matrix(1 0 0 1 1971.7202 2198.2344)" class="st2 st3">V</text>
 					</svg>
 			    </div>
-			    <button id="slideMenuButton" class="burger-nav">
+			    <button id="slideMenuButton" class="burger-nav" ng-click="burgerShow = !burgerShow">
 					<span class="menu-bar"></span>
 					<span class="menu-bar"></span>
 					<span class="menu-bar"></span>
 				</button>
-			    <ul class="menu">
+			    <ul class="menu" ng-class="{'show-me' : burgerShow}">
 			      <li><a href="index.html">Inicio</a></li>
 			      <li class="active"><a href="news.html">Noticias</a></li>
 			      <li><a href="programs.html">Programas</a></li>
@@ -73,19 +73,19 @@
 				</div>
 				<div>
 					<div ng-attr-id="{{'article-' + article.index}}" class="clearfix news-main" ng-repeat="article in newsArticles | filter:searchText">
-						<h1 class="subtitle">{{article.title}}</h1>
-						<p class="date">publicado: {{article.registered | date : 'dd/MM/yyyy'}}</p>
+						<h1 class="subtitle">{{article.News_Title}}</h1>
+						<p class="date">publicado: {{article.News_Date | date : 'dd/MM/yyyy'}}</p>
 						<div class="clearfix">
-							<img class="news-main-img" ng-src="{{article.imgPath}}" ng-show="article.imgPath.length">
+							<img class="news-main-img" ng-src="{{'img/news/' + article.News_impPath}}" ng-show="article.News_impPath.length">
 							<div class="news-body">
 								<p>
-									{{article.body}}
+									{{article.News_Body}}
 								</p>
 							</div>
 						</div>	
 						<div class="tags">
 							<label>Tags:</label>
-							<span ng-repeat="tag in article.tags">{{tag}}</span>
+							<span ng-repeat="tag in article.Tags">{{tag}}</span>
 						</div>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 				<div scroll id="to-fix">
 					<h2>Lista de Articulos</h2>
 					<div ng-repeat="article in newsArticles | filter:searchText">
-						<a ng-attr-href="{{'#article-' + article.index }}">{{article.title}}</a>
+						<a ng-attr-href="{{'#article-' + article.index }}">{{article.News_Title}}</a>
 					</div>
 				</div>
 			</aside>

@@ -16,7 +16,7 @@ myApp.directive("scroll", function ($window) {
 
 myApp.service('newsService', function($http, $q){
 	var deferred = $q.defer(); //promise to say 'im going to do this later'
-	$http.get('../data/news_mock.json').then(function(data){
+	$http.get('/api/public/news').then(function(data){
 		deferred.resolve(data);
 	});
 	this.getNews = function(){
@@ -30,6 +30,11 @@ myApp.controller("newsController", function($scope, newsService){
 		$scope.newsArticles = data.data;
 		console.log($scope.newsArticles);
 	});
+
+myApp.controller("headerController", function($scope, newsService){
+	$scope.burgerShow = false;
+});
+
 	/*
 	$scope.searchArticle = function(item){
 		console.log(item.title);

@@ -29,25 +29,25 @@ function loadNews(){
 	
 	$.ajax({
 		type: 'GET',
-		url: '/data/news_mock.json',
+		url: '/api/public/news',
 		success: function(data){
 			$newsContainer.empty();
 			$.each(data, function(i, article){
 				$newsContainer.append('<a href="news.html">' +
 			'<div class="news-wrapper">' +
 				'<div class="news-date">' +
-					'<div class="news-day">'+ moment(article.registered).format('DD') +'</div>' +
-					'<div class="news-month">'+ moment(article.registered).format('MMM') +'</div>'+
+					'<div class="news-day">'+ moment(article.News_Date).format('DD') +'</div>' +
+					'<div class="news-month">'+ moment(article.News_Date).format('MMM') +'</div>'+
 				'</div>' +
-				'<div class="news-card" style="background-image: url('+ article.imgPath +')">' +
+				'<div class="news-card" style="background-image: url(img/news/'+ article.News_impPath +')">' +
 					'<div class="news-caption"><strong>' +
-						article.title +
+						article.News_Title +
 						'</strong>' +	
-						'<p>'+ article.body.substring(0, myLength + 10) + '...' + '</p>' +
+						'<p>'+ article.News_Body.substring(0, myLength + 10) + '...' + '</p>' +
 					'</div>' +
 				'</div>' +
 				'<p class="news-body">' +
-				article.body.substring(0,myLength) + '...' +
+				article.News_Body.substring(0,myLength) + '...' +
 				'</p>' +
 			'</div>' +
 		'</a>')
