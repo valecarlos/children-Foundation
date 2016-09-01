@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Noticias</title>
+  <title>Crear Conciencia | Noticias</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/newsTheme.css">
@@ -13,24 +19,11 @@
 		<p>Esta Página se encuentra en construcción!</p>
 	</div>
 		<div class="top"></div>
-			<div class="nav-wrapper">
+			<div class="nav-wrapper clearfix">
 			  <div class="navigation">
-			    <div class="main-icon">
-			    	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 viewBox="0 0 3968.5 2834.6" style="enable-background:new 0 0 3968.5 2834.6;" xml:space="preserve">
-					<style type="text/css">
-						.st0{fill:#FFFFFF;stroke:#000000;stroke-width:20;stroke-miterlimit:10;}
-						.st1{fill:none;}
-						.st2{font-family:'Gondola';}
-						.st3{font-size:1053.5675px;}
-					</style>
-					<circle id="XMLID_1_" class="st0" cx="2038.9" cy="1412.3" r="1405.3"/>
-					<rect id="XMLID_2_" x="1382.1" y="771.1" class="st1" width="901.6" height="914.7"/>
-					<text id="XMLID_3_" transform="matrix(1 0 0 1 1382.0532 1591.8076)" class="st2 st3">C</text>
-					<rect id="XMLID_6_" x="1971.7" y="1377.5" class="st1" width="901.6" height="914.7"/>
-					<text id="XMLID_5_" transform="matrix(1 0 0 1 1971.7202 2198.2344)" class="st2 st3">V</text>
-					</svg>
-			    </div>
+			    <a href="index.html" class="main-icon">
+			    	<img src="img/Logos-crear.png">
+			    </a>
 			    <button id="slideMenuButton" class="burger-nav" ng-click="burgerShow = !burgerShow">
 					<span class="menu-bar"></span>
 					<span class="menu-bar"></span>
@@ -40,20 +33,20 @@
 			      <li><a href="index.html">Inicio</a></li>
 			      <li class="active"><a href="news.html">Noticias</a></li>
 			      <li><a href="programs.html">Programas</a></li>
-			      <li><a href="about.html">Quienes Somos</a></li>
+			      <li><a href="about.html">Quiénes Somos</a></li>
 			      <li class="dropdown">
 			      	<a href="contact.html">Contáctanos</a>
 			      	<div class="dropdown-content">
 			      		<a href="contact.html">Contacto</a>
-			      		<a href="">Oportunidades</a>
+			      		<a href="careers.html">Oportunidades</a>
 			      	</div>
 			      </li>
-			      <li><a class="donar" href="">DONA AHORA</a></li>
+			      <li><a class="donar" href="donate.html">DONA AHORA</a></li>
 			    </ul>
 			</div>
 		</div>	
 	<header class="news-header">
-		<h1 class="title">NOTICIAS</h1>
+		<h1 class="title">NOTICIAS Y ARTÍCULOS DE INTERÉS</h1>
 	</header>
 	<section class="news-section" ng-controller="newsController">
 		<div class="clearfix">
@@ -73,19 +66,19 @@
 				</div>
 				<div>
 					<div ng-attr-id="{{'article-' + article.index}}" class="clearfix news-main" ng-repeat="article in newsArticles | filter:searchText">
-						<h1 class="subtitle">{{article.News_Title}}</h1>
-						<p class="date">publicado: {{article.News_Date | date : 'dd/MM/yyyy'}}</p>
+						<h1 class="subtitle" ng-bind="article.News_Title"></h1>
+						<p class="date"><span>publicado: </span><span ng-bind="article.News_Date | date : 'dd/MM/yyyy'"></span></p>
 						<div class="clearfix">
 							<img class="news-main-img" ng-src="{{'img/news/' + article.News_impPath}}" ng-show="article.News_impPath.length">
 							<div class="news-body">
-								<p>
-									{{article.News_Body}}
+								<p ng-bind="article.News_Body">
+
 								</p>
 							</div>
 						</div>	
 						<div class="tags">
 							<label>Tags:</label>
-							<span ng-repeat="tag in article.Tags">{{tag}}</span>
+							<span ng-repeat="tag in article.Tags" ng-bind="tag"></span>
 						</div>
 					</div>
 				</div>
@@ -94,7 +87,7 @@
 				<div scroll id="to-fix">
 					<h2>Lista de Articulos</h2>
 					<div ng-repeat="article in newsArticles | filter:searchText">
-						<a ng-attr-href="{{'#article-' + article.index }}">{{article.News_Title}}</a>
+						<a ng-attr-href="{{'#article-' + article.index }}" ng-bind="article.News_Title"></a>
 					</div>
 				</div>
 			</aside>
@@ -105,8 +98,28 @@
 	      <li><a href="index.html">Inicio</a></li>
 	      <li><a href="news.html">Noticias</a></li>
 	      <li><a href="programs.html">Programas</a></li>
-	      <li><a href="about.html">Quienes Somos</a></li>
+	      <li><a href="about.html">Quiénes Somos</a></li>
 	      <li><a href="contact.html">Contáctanos</a></li>
+	    </ul>
+	    <ul class="footer-social-links">
+	    	<li>
+	    		<a href="https://www.facebook.com/crearconciencia.org">
+	    			<div class="social-icon-container">
+		    			<object>
+		    				<embed src="img/icons/facebook.svg">
+		    			</object>
+	    			</div>
+	    		</a>
+	    	</li>
+	    	<li>
+	    		<a href="https://twitter.com/col_conciencia">
+	    			<div class="social-icon-container">
+		    			<object>
+		    				<embed src="img/icons/twitter.svg">
+		    			</object>
+	    			</div>
+	    		</a>
+	    	</li>
 	    </ul>
 		<p>©2016. Todos los derechos reservados.</p>
 	</footer>

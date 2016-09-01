@@ -38,6 +38,7 @@ a {
   z-index: 1000;
   font-weight: 500;
   letter-spacing: 2px;
+  display: none;
 }
 
 @keyframes construction-animation {
@@ -66,7 +67,6 @@ a {
 }
 
 .top {
-  animation-name: margin-top-animation;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
   height: 3px;
@@ -79,7 +79,7 @@ a {
 }
 
 .navigation {
-  margin: 10px 4em;
+  margin: 10px 3em;
 }
 .navigation .burger-nav {
   margin-right: 10px;
@@ -104,6 +104,9 @@ a {
 }
 .navigation .main-icon svg {
   width: 70px;
+}
+.navigation .main-icon img {
+  width: 150px;
 }
 .navigation .menu {
   float: right;
@@ -162,8 +165,9 @@ a {
   overflow: hidden;
 }
 .header .header-img {
-  background: url("../img/kidsWater.jpg");
+  background: url("../img/main.jpg");
   background-size: cover;
+  background-position: center;
   height: 400px;
   -webkit-filter: blur(4px);
           filter: blur(4px);
@@ -176,12 +180,14 @@ a {
   height: 400px;
   display: block;
   color: white;
-  padding-top: 185px;
+  padding-top: 205px;
   padding-left: 6%;
 }
 .header .header-title h1 {
   text-shadow: 0px 2px 2px black;
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: 500;
+  margin: 15px 0px 20px;
 }
 .header .header-title p {
   text-shadow: 0px 2px 2px black;
@@ -208,9 +214,12 @@ h1.subtitle {
   color: #545454;
 }
 
-@media only screen and (min-width: 820px) and (max-width: 1080px) {
+@media only screen and (min-width: 880px) and (max-width: 1134px) {
   .navigation {
-    margin: 10px 0em;
+    margin: 10px 0px 10px 2em;
+  }
+  .navigation .main-icon img {
+    width: 120px;
   }
   .navigation .menu {
     margin-right: 10px;
@@ -222,9 +231,12 @@ h1.subtitle {
     padding: 10px;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 820px) {
+@media only screen and (min-width: 320px) and (max-width: 880px) {
   .navigation {
-    margin: 10px 0em;
+    margin: 10px 0px 10px 1em;
+  }
+  .navigation .main-icon img {
+    width: 100px;
   }
   .navigation .burger-nav {
     display: inline-block;
@@ -295,6 +307,21 @@ footer p {
   margin: 10px;
 }
 
+.footer-social-links li {
+  display: inline-block;
+}
+.footer-social-links li a {
+  display: block;
+  margin: 10px 10px;
+}
+.footer-social-links li a .social-icon-container {
+  width: 30px;
+  height: 30px;
+}
+.footer-social-links li a object {
+  pointer-events: none;
+}
+
 .icons {
   text-align: center;
   padding: 3em 3em;
@@ -323,7 +350,6 @@ footer p {
 
 .blog-links {
   text-align: center;
-  background-color: #f7f7f7;
 }
 .blog-links hr {
   display: inline-block;
@@ -604,7 +630,7 @@ footer p {
 }
 
 .slider-wrapper {
-  width: 1200px;
+  width: 2800px;
   transition: all 0.6s ease-in-out;
 }
 
@@ -636,7 +662,7 @@ footer p {
   }
 
   .slider-wrapper {
-    width: 870px;
+    width: 2030px;
   }
 
   .slider-card {
@@ -660,6 +686,7 @@ footer p {
 .programs-section {
   padding: 20px 3%;
   text-align: center;
+  background-color: #f7f7f7;
 }
 .programs-section hr {
   display: inline-block;
@@ -719,7 +746,7 @@ footer p {
   background-image: url("../img/IP-01-CREDIT_Tom_Moore.jpg");
 }
 .program-container .herramientas {
-  background-image: url("../img/IP-06-CREDIT_Tom_Moore.jpg");
+  background-image: url("../img/thumbs/CH2.jpg");
 }
 
 @media only screen and (min-width: 320px) and (max-width: 825px) {

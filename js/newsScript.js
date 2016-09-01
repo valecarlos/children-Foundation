@@ -3,7 +3,7 @@ myApp.directive("scroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
         	var myEl = angular.element(document.querySelector('#to-fix'));
-             if (this.pageYOffset >= 297) {
+             if (this.pageYOffset >= 257) {
 				myEl.addClass('fix-me');
              } else {
              	myEl.removeClass('fix-me');
