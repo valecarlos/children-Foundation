@@ -233,7 +233,7 @@ h1.subtitle {
 }
 @media only screen and (min-width: 320px) and (max-width: 880px) {
   .navigation {
-    margin: 10px 0px 10px 1em;
+    margin: 10px 0px 10px 0px;
   }
   .navigation .main-icon img {
     width: 100px;
@@ -261,6 +261,7 @@ h1.subtitle {
   .navigation .menu li.dropdown .dropdown-content {
     display: block;
     position: relative;
+    box-shadow: none;
   }
   .navigation .menu li.dropdown .dropdown-content a:first-child {
     display: none;
@@ -350,6 +351,7 @@ footer p {
 
 .blog-links {
   text-align: center;
+  padding: 20px 0px;
 }
 .blog-links hr {
   display: inline-block;
@@ -609,7 +611,7 @@ footer p {
   stroke-width: 3;
 }
 .slider-controls #slider-right {
-  transform: translate(220px, -50%);
+  transform: translate(200px, -50%);
 }
 .slider-controls #slider-right svg {
   width: 60px;
@@ -630,7 +632,7 @@ footer p {
 }
 
 .slider-wrapper {
-  width: 2800px;
+  width: 3200px;
   transition: all 0.6s ease-in-out;
 }
 
@@ -656,13 +658,39 @@ footer p {
   margin: 10px;
 }
 
+.not-round {
+  border-radius: 0%;
+  width: 100px;
+}
+.not-round + .contrib-caption {
+  padding-left: 0px;
+  width: 270px;
+}
+
+.slider-nav {
+  padding: 0px 10px 10px 10px;
+}
+.slider-nav li {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #33658A;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.slider-nav li.active-button {
+  background-color: #33658A;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 590px) {
   .slider-container {
     width: 290px;
   }
 
   .slider-wrapper {
-    width: 2030px;
+    width: 2320px;
   }
 
   .slider-card {
@@ -677,6 +705,13 @@ footer p {
   .contrib-caption {
     padding-left: 5px;
     width: 240px;
+  }
+
+  .not-round {
+    width: 70px;
+  }
+  .not-round + .contrib-caption {
+    width: 220px;
   }
 
   #slider-left, #slider-right {
@@ -746,7 +781,7 @@ footer p {
   background-image: url("../img/IP-01-CREDIT_Tom_Moore.jpg");
 }
 .program-container .herramientas {
-  background-image: url("../img/thumbs/CH2.jpg");
+  background-image: url("../img/thumbs/CH6.jpg");
 }
 
 @media only screen and (min-width: 320px) and (max-width: 825px) {

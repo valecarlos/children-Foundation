@@ -3,22 +3,10 @@ $( document ).ready(function() {
 	$("#slideMenuButton").click(function(event){
     	$('.menu').toggleClass('show-me');
     });
-
-	/*
-	console.log("im here");
-    $("#about-button").click(function(event){
-    	console.log("i was clikced");
-    	$('.about-wrapper').addClass('is-showing');
-    	$('.about-extended').show();
-    });
-
-    $("#back-about-button").click(function(event){
-    	$('.about-wrapper').removeClass('is-showing');
-    	$('.about-extended').hide(800);
-    });
-	*/
+	
 	mySlider = new Slider;
 });
+
 
 function loadNews(){
 	var myLength = 100;
@@ -61,6 +49,32 @@ var Slider = function(){
 	var currentSlide = 0;
 	var slideWidth = $(".slider-card").width();
 	var myInterval;
+	var ulSlider = $('.slider-nav');
+	//create nav buttons <li>
+	var createNavigation = function(){
+		var newLI = '<li></li>';
+		var newLIActive = '<li class= "active-button"></li>';
+		for (var i = 0; i<= slides ; i++){
+				if (i === 0){
+					ulSlider.append(newLIActive);	
+				}
+				else{
+					ulSlider.append(newLI);
+				}
+			}
+	}();
+
+	//add event binders to the dynamically added li elements
+	$('.slider-nav').on('click', 'li', function() {
+		//set this to be the next slide, stop the function interval and start it again 
+		currentSlide = $(this).index();
+		clearInterval(myInterval);
+		$(".slider-wrapper").css({"margin-left" : -slideWidth * currentSlide});
+		//remove the active-button class for al <li> and then assign it to the clicked one
+		ulSlider.children().removeClass("active-button");
+		$(this).addClass("active-button");
+		myInterval = setInterval(goRight, 3000);
+	});
 
 	$("#slider-left").click(function(event){
 		clearInterval(myInterval);
@@ -76,12 +90,16 @@ var Slider = function(){
 
 	function goRight(){
 		currentSlide = currentSlide === slides ? 0 : currentSlide + 1;
-		$(".slider-wrapper").css({"margin-left" : -slideWidth * currentSlide});	
+		$(".slider-wrapper").css({"margin-left" : -slideWidth * currentSlide});
+		ulSlider.children().removeClass("active-button");
+		ulSlider.children().eq(currentSlide).addClass("active-button");	
 	}
 
 	function goLeft(){
 		currentSlide = currentSlide === 0 ? slides : currentSlide - 1;
 		$(".slider-wrapper").css({"margin-left" : -slideWidth * currentSlide});
+		ulSlider.children().removeClass("active-button");
+		ulSlider.children().eq(currentSlide).addClass("active-button");	
 	}
 
 	function sliderResize(){
@@ -97,5 +115,4 @@ var Slider = function(){
 	$(window).on('resize', function() {
 	    sliderResize();
 	});
-
 };

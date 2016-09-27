@@ -233,7 +233,7 @@ h1.subtitle {
 }
 @media only screen and (min-width: 320px) and (max-width: 880px) {
   .navigation {
-    margin: 10px 0px 10px 1em;
+    margin: 10px 0px 10px 0px;
   }
   .navigation .main-icon img {
     width: 100px;
@@ -261,6 +261,7 @@ h1.subtitle {
   .navigation .menu li.dropdown .dropdown-content {
     display: block;
     position: relative;
+    box-shadow: none;
   }
   .navigation .menu li.dropdown .dropdown-content a:first-child {
     display: none;
@@ -349,6 +350,15 @@ footer p {
   line-height: 170%;
   margin-top: 8px;
   margin-bottom: 8px;
+  text-align: justify;
+}
+
+.about-what {
+  margin-top: 15px;
+}
+.about-what ul {
+  padding-left: 30px;
+  list-style-type: circle;
 }
 
 .about-mision, .about-vision {
@@ -460,6 +470,11 @@ footer p {
   .about-mision, .about-vision {
     width: 100%;
     float: none;
+  }
+
+  .team .member-card {
+    width: 100%;
+    max-width: 300px;
   }
 }
 

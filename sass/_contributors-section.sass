@@ -57,7 +57,7 @@
       stroke-width: 3
 
   #slider-right
-    transform: translate(220px, -50%)
+    transform: translate(200px, -50%)
 
     svg
       width: 60px
@@ -98,6 +98,32 @@
   p
     margin: 10px
 
+.not-round
+  border-radius: 0%
+  width: 100px
+
+  &+ .contrib-caption
+    padding-left: 0px
+    width: 270px
+
+.slider-nav
+  padding: 0px 10px 10px 10px
+
+  li
+    display: inline-block
+    height: 15px
+    width: 15px
+    border: 1px solid $second-color
+    background-color: white
+    border-radius: 50%
+    margin-left: 10px
+    cursor: pointer
+
+    &.active-button
+      background-color: $second-color 
+      
+
+
 @media only screen and (min-width: 320px) and (max-width: 590px)
   .slider-container
     width: 290px
@@ -115,6 +141,12 @@
   .contrib-caption
     padding-left: 5px
     width: 240px
+
+  .not-round
+    width: 70px
+
+    &+ .contrib-caption
+      width: 220px
 
   #slider-left, #slider-right
     display: none
