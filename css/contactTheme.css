@@ -365,6 +365,12 @@ footer p {
   max-width: 1100px;
   margin: auto;
 }
+.summary p.policy {
+  margin-bottom: 15px;
+}
+.summary p.policy a {
+  text-decoration: underline;
+}
 .summary h5 {
   color: #545454;
   margin: 10px 0px;
@@ -424,7 +430,7 @@ footer p {
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857;
+  line-height: 1.42857143;
   color: #555;
   background-color: #fff;
   background-image: none;
@@ -446,7 +452,7 @@ footer p {
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.42857;
+  line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;

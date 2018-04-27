@@ -452,7 +452,7 @@ footer p {
 .program-wrapper .program-box .program-desc ul li span {
   color: #696969;
 }
-.program-wrapper .program-box .program-desc a {
+.program-wrapper .program-box .program-desc a.link {
   margin: 15px 0px 10px;
   display: inline-block;
   padding: 8px 14px;
@@ -461,7 +461,7 @@ footer p {
   border: solid 2px #33658A;
   transition: all 0.3s ease-in-out;
 }
-.program-wrapper .program-box .program-desc a:hover {
+.program-wrapper .program-box .program-desc a.link:hover {
   color: #33658A;
   background-color: transparent;
 }

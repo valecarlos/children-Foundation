@@ -9,6 +9,7 @@ $( document ).ready(function() {
 
 
 function loadNews(){
+	moment.locale("es"); 
 	var myLength = 100;
 	var spinner = '<div class="loader">Loading...</div>';
 	var $newsContainer = $('#blog-links');
@@ -19,6 +20,10 @@ function loadNews(){
 		type: 'GET',
 		url: '/api/public/news',
 		success: function(data){
+			if (data.length > 3){
+				trimmedData = data.slice(0,3);
+				data = trimmedData;
+			}
 			$newsContainer.empty();
 			$.each(data, function(i, article){
 				$newsContainer.append('<a href="news.html">' +

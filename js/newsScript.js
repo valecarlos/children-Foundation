@@ -1,3 +1,5 @@
+moment.locale("es");
+ 
 var myApp = angular.module("newsModule", ['ngAnimate']);
 myApp.directive("scroll", function ($window) {
     return function(scope, element, attrs) {
@@ -27,6 +29,9 @@ myApp.service('newsService', function($http, $q){
 myApp.controller("newsController", function($scope, newsService){
 	var promise = newsService.getNews();
 	promise.then(function(data){
+		for (var i = 0; i<data.data.length; i++){
+			data.data[i].formattedDate = moment(data.data[i].News_Date).format('LL');
+		}
 		$scope.newsArticles = data.data;
 		console.log($scope.newsArticles);
 	});

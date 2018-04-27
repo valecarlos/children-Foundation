@@ -65,9 +65,9 @@
 					<input type="text" placeholder="Por ejem.: Eventos, Lanzamiento, etc." ng-model="searchText">
 				</div>
 				<div>
-					<div ng-attr-id="{{'article-' + article.index}}" class="clearfix news-main" ng-repeat="article in newsArticles | filter:searchText">
+					<div ng-attr-id="{{'article-' + $index}}" class="clearfix news-main" ng-repeat="article in newsArticles | filter:searchText">
 						<h1 class="subtitle" ng-bind="article.News_Title"></h1>
-						<p class="date"><span>publicado: </span><span ng-bind="article.News_Date | date : 'dd/MM/yyyy'"></span></p>
+						<p class="date"><span>publicado: </span><span ng-bind="article.formattedDate"></span></p>
 						<div class="clearfix">
 							<img class="news-main-img" ng-src="{{'img/news/' + article.News_impPath}}" ng-show="article.News_impPath.length">
 							<div class="news-body">
@@ -87,7 +87,7 @@
 				<div scroll id="to-fix">
 					<h2>Lista de Articulos</h2>
 					<div ng-repeat="article in newsArticles | filter:searchText">
-						<a ng-attr-href="{{'#article-' + article.index }}" ng-bind="article.News_Title"></a>
+						<a ng-attr-href="{{'#article-' + $index }}" ng-bind="article.News_Title"></a>
 					</div>
 				</div>
 			</aside>
@@ -125,6 +125,7 @@
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+	<script src="js/moment-with-locales.min.js"></script>
 	<script src="js/newsScript.js"></script>
 </body>
 </html>
