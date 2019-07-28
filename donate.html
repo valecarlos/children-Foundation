@@ -11,7 +11,8 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="theme-color" content="#ffffff">
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/careerstheme.css">
+	<link rel="stylesheet" type="text/css" href="css/careerstheme.css">
+	<link rel="stylesheet" type="text/css" href="css/donations.css">
 </head>
 <body>
 	<div class="under-construction">
@@ -49,7 +50,49 @@
 	</header>
 	<section class="careers-sec">
 		<div class="careers-content">
-			<p>En este momento estamos trabajando para facilitar que nos ayudes con aportes en dinero. Puedes contactarnos a nuestro correo para coordinar lo relacionado con este tema.</p>
+			<p>Puedes realizar tus donaciones de forma rápida y segura a través de PayU.</p>
+			<div class="donation-form">
+				<h2>Selecciona el Monto a donar:</h2>
+				<ul class="amount-list">
+					<li>
+						<input type="radio" id="option1" name="selector" value="option1">
+						<label for="option1">$25.000</label>
+			
+						<div class="check"></div>
+					</li>
+			
+					<li>
+						<input checked type="radio" id="option2" name="selector" value="option2">
+						<label for="option2">$50.000</label>
+			
+						<div class="check">
+							<div class="inside"></div>
+						</div>
+					</li>
+			
+					<li>
+						<input type="radio" id="option3" name="selector" value="option3">
+						<label for="option3">$100.000</label>
+			
+						<div class="check">
+							<div class="inside"></div>
+						</div>
+					</li>
+					<li>
+						<input type="radio" id="option4" name="selector" value="option4">
+						<label for="option4">$300.000</label>
+			
+						<div class="check">
+							<div class="inside"></div>
+						</div>
+					</li>
+				</ul>
+				<div class="donate-button-container">
+					<a id="donate-button">
+						<img src="http://www.payulatam.com/img-secure-2015/boton_pagar_grande.png">
+					</a>
+				</div>
+			</div>
 			<p>También puedes realizar otro tipo de donaciones como materiales y equipos. En este caso publicaremos una lista de lo que estamos necesitando. Este tipo de donaciones las recibimos con mucho gusto, pero siempre requerimos de un contacto previo para estar seguros de que le podremos dar uso a estos elementos.</p>
 		</div>
 	</section>
@@ -81,9 +124,10 @@
 	    		</a>
 	    	</li>
 	    </ul>
-		<p>©2016. Todos los derechos reservados.</p>
+		<p>©2018. Todos los derechos reservados.</p>
 	</footer>
 	<script src="js/jquery-3.1.0.min.js"></script>
 	<script src="js/responsiveMenu.js"></script>
+	<script src="js/donScript.js"></script>
 </body>
 </html>

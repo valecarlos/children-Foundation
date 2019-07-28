@@ -169,8 +169,7 @@ a {
   background-size: cover;
   background-position: center;
   height: 400px;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
+  filter: blur(4px);
 }
 .header .header-title {
   position: absolute;
@@ -466,6 +465,10 @@ footer p {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+}
+
+.margin10 {
+  margin: 10px 0px;
 }
 
 /*# sourceMappingURL=contactTheme.css.map */

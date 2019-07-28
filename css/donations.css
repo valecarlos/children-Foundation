@@ -1,0 +1,153 @@
+/* original content from https://codepen.io/AngelaVelasquez/pen/Eypnq
+.donation-form{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+ul.amount-list{
+  list-style: none;
+  padding: 0;
+	overflow: auto;
+  margin: 5px 0;
+  width: 50%;
+}
+
+ul.amount-list li{
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+ul.amount-list li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul.amount-list li label{
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 80px;
+  margin: 10px auto;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul.amount-list li:hover label{
+	color: #a6c307;
+}
+
+ul.amount-list li .check{
+  display: block;
+  position: absolute;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  top: 30px;
+  left: 20px;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+ul.amount-list li:hover .check {
+  border: 5px solid #a6c307;
+}
+
+ul.amount-list li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  top: 5px;
+	left: 5px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+ul.amount-list input[type=radio]:checked ~ .check {
+  border: 5px solid #a6c307;
+}
+
+ul.amount-list input[type=radio]:checked ~ .check::before{
+  background: #a6c307;
+}
+
+ul.amount-list input[type=radio]:checked ~ label{
+  color: #a6c307;
+} */
+
+/* original content from https://codepen.io/AngelaVelasquez/pen/Eypnq */
+.donation-form{
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+ul.amount-list{
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../img/IP-01-CREDIT_Tom_Moore.jpg);
+}
+
+ul.amount-list li{
+  color: white;
+  position: relative;
+  width: 50%;
+  list-style: none;
+  border: white 10px solid;
+}
+
+ul.amount-list li input[type=radio]{
+  display: none;
+}
+
+ul.amount-list li label{
+  display: block;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 25px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  text-align: center;
+  background-color: #33658a;
+  background-color: #2ea1f7eb;
+}
+
+ul.amount-list li:hover label{
+	opacity: 1;
+}
+
+ul.amount-list input[type=radio]:checked ~ label{
+  background-color: #9acd32ed;
+}
+
+.donation-form h2{
+  text-align: center;
+}
+
+.donate-button-container{
+  text-align: center;
+}
+
+#donate-button{
+  cursor: pointer;
+}
+@media (max-width: 485px) {
+  ul.amount-list li label{
+    font-size: 1em;
+  }
+}

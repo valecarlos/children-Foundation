@@ -169,8 +169,7 @@ a {
   background-size: cover;
   background-position: center;
   height: 400px;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
+  filter: blur(4px);
 }
 .header .header-title {
   position: absolute;
